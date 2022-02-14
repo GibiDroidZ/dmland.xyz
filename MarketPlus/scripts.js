@@ -560,7 +560,7 @@ $('.filter_tabs li').click(function() {
 
 // Load MarketPlace
 function loadMarketPlace() {
-var query = '{"clazz":[' + race + '],"limit":' + maxDisplay + ',"page":' + page + ',"stage":[' + form + '],"saleType":[],' + sortParam + ',"dna":[' + JSON.stringify(searchPartToQuery) + '],"attackArr":[' + attack + '],"defenseArr":[' + defense + '],"healthArr":[' + health + '],"speedArr":[' + speed + '],"intelligenceArr":[' + intellect + '],"ceArr":[' + ce + '],"breedCountArr":[ ' + breedCount + ']}';
+var query = '{"clazz":[' + race + '],"limit":' + maxDisplay + ',"page":' + page + ',"stage":[' + form + '],"saleType":[],' + sortParam + ',"dna":[],"attackArr":[' + attack + '],"defenseArr":[' + defense + '],"healthArr":[' + health + '],"speedArr":[' + speed + '],"intelligenceArr":[' + intellect + '],"ceArr":[' + ce + '],"breedCountArr":[ ' + breedCount + ']}';
 
 $.ajax({
   type: "POST",
