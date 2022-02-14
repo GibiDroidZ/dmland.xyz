@@ -189,7 +189,7 @@ function onLoadDNA(searchPartString) {
   var searchParts = [];
   searchParts = searchPartString.split(',');
       for (var g = 0; g < searchParts.length-1; g++) {
-        alert(searchParts[g]);
+        //alert(searchParts[g]);
         searchPartToQueryString = JSON.stringify(getDNA(searchParts[g]));
 //alert('getDNA' + JSON.stringify(getDNA(searchParts[g])));
         //alert('searchPartToQueryString'+ JSON.stringify(getDNA(searchParts[g])));
