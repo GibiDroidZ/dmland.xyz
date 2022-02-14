@@ -539,7 +539,7 @@
   background-color: RGB(220, 220, 220);
 }
 
-.ui-widget.ui-widget-content {
+.ui-autocomplete {
   height: 310px;
   overflow: hidden;
 }
