@@ -199,6 +199,19 @@ a {
   text-align: center;
   color: white;
   vertical-align: text-bottom;
+  margin-right;
+}
+
+.parts-eye,
+.parts-totem,
+.parts-horn,
+.parts-ear,
+.parts-wing,
+.parts-tail {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
 }
 
 .skill_stats {
@@ -246,14 +259,12 @@ a {
   border-radius: 30px 0;
 }
 
-.skill_stats-level {
-  right: -5px;
-  top: -5px;
-  border-radius: 5px;
-  height: 35px !important;
-  width: 35px !important;
-  border: 2px solid white !important;
+.dragon_skill1-level,
+.dragon_skill2-level,
+.dragon_skill3-level,
+.dragon_skill4-level {
   text-align: center;
+  text-shadow: 0 0 2px white, 0 0 2px black;
 }
 
 .dragon_skill-title {

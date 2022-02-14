@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/DM-logo.png">
+  <link rel="icon" href="../assets/DM-logo.png">
 
   <link href="../general.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
@@ -48,20 +48,21 @@
       <div class="col l6 m6 s6">
         <a href="../CheckerPlus/index.html">
           <i class="fa-duotone fa-badge-check fa-2xl"></i> <br />
-          Checker +
+          Checker <i class="fa-solid fa-square-plus"></i>
         </a>
       </div>
 
       <div class="col l6 m6 s6">
         <a href="#">
           <i class="fa-duotone fa-bag-shopping fa-2xl"></i><br />
-          Market +
+          Market <i class="fa-solid fa-square-plus"></i>
         </a>
       </div>
     </div>
 
     <div class="changeLogsContent dropdown_Picker hide">
       <p class="small-text">
+        <b>02/15/22.</b> Released v0.0.6. Added Parts search (highly experimental). <br />
         <b>02/12/22.</b> Released v0.0.5. Updated Header UI + Sidebar checkBoxes and added Dark Mode. <br />
         <b>02/06/22.</b> Released v0.0.4. Updated some UI components + fixed slider bug on page load.<br />
         <b>02/05/22.</b> Released v0.0.3. Added Stat, Max Display filters and reworked Sort. <br />
@@ -76,7 +77,6 @@
         TO DO: <br>
         1. Allow multiple pages to be displayed<br>
         2. Responsiveness issue <br />
-        3. Add Parts filter <br />
       </p>
       <p class="small-text">Want to help the project? Join my discord <b><i><a href="https://discord.gg/MkKbAYFg9F">here</a></i></b></p>
 
@@ -93,7 +93,6 @@
     </div>
 
     <div class="side_bar">
-      <!--a href="../MarketPlus/index.html"><img src="../assets/DM-logo.png" alt="DM logo" /></a-->
       <h1 class="sidebar_Title">Market <i class="fa-solid fa-square-plus marketPlusIcon"></i></h1>
       <div class="filters">
         <div class="filterButtons">
@@ -172,24 +171,10 @@
           </div>
 
           <div class="categ_parts hide filterCategContainer">
-            <p>This feature is currently not available.</p>
+            <p>This feature is highly experimental.</p>
 
             <input type="text" name="search" class="browser-default textField">
-            <div id="selectedPartsList">
-
-              <!--div class="selectedPart">
-                <div class="valign-wrapper selectedPartDetail">
-                  <div class="dragonPart part-Goldencheess"></div>
-                  <span>
-                    <p class="dragon_partName">Ice Gem</p>
-                    <p class="dragon_skillName">Recovery</p>
-                  </span>
-                  <i class="fa-solid fa-xmark removeSelected"></i>
-                </div>
-
-                <p class="dragon_skillDetails"> <i class="fa-solid fa-circle-bolt"></i> 1 &bull; <i class="fas fa-sword"></i> 0 &bull; <i class="fas fa-shield"></i> 100</p>
-              </div-->
-            </div>
+            <div id="selectedPartsList"></div>
           </div>
 
           <div class="categ_stat hide filterCategContainer">
@@ -273,8 +258,7 @@
         </div>
       </div>
 
-      <div id="products" class="row">
-      </div>
+      <div id="products" class="row"></div>
     </div>
   </main>
 

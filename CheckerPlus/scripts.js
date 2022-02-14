@@ -257,6 +257,13 @@ function retrieveDragon(inputData) {
         default:
       }
 
+      $(".parts-eye").attr('class', 'parts-eye part-' + dragons.data.parts[0].dnaNameEn.replace(/\s/g, ''));
+      $(".parts-totem").attr('class', 'parts-totem part-' + dragons.data.parts[1].dnaNameEn.replace(/\s/g, ''));
+      $(".parts-horn").attr('class', 'parts-horn part-' + dragons.data.parts[2].dnaNameEn.replace(/\s/g, ''));
+      $(".parts-ear").attr('class', 'parts-ear part-' + dragons.data.parts[3].dnaNameEn.replace(/\s/g, ''));
+      $(".parts-wing").attr('class', 'parts-wing part-' + dragons.data.parts[4].dnaNameEn.replace(/\s/g, ''));
+      $(".parts-tail").attr('class', 'parts-tail part-' + dragons.data.parts[5].dnaNameEn.replace(/\s/g, ''));
+
       $(".dragon_parts-eye").html(dragons.data.parts[0].dnaNameEn + '<i class="partMutation"> ' + part1Mutation + '</i>');
       $(".dragon_parts-totem").html(dragons.data.parts[1].dnaNameEn + '<i class="partMutation"> ' + part2Mutation + '</i>');
       $(".dragon_parts-horn").html(dragons.data.parts[2].dnaNameEn + '<i class="partMutation"> ' + part3Mutation + '</i>');
@@ -277,7 +284,9 @@ function retrieveDragon(inputData) {
       $(".dragon_skill1-description").html(dragons.data.skillNo1.des);
       $(".dragon_skill1-damage").html(dragons.data.skillNo1.damage);
       $(".dragon_skill1-shield").html(dragons.data.skillNo1.shield);
-      $(".dragon_skill1-level").html(dragons.data.skillNo1.level - 1 + ' ⇧');
+      for (var star = 0; star < dragons.data.skillNo1.level - 1; star++) {
+        $(".dragon_skill1-level").append('⭐');
+      }
       $(".dragon_skill-part1").html(dragons.data.parts[2].dnaNameEn);
 
       $(".dragon_skill2").html(dragons.data.skillNo2.name);
@@ -285,7 +294,9 @@ function retrieveDragon(inputData) {
       $(".dragon_skill2-description").html(dragons.data.skillNo2.des);
       $(".dragon_skill2-damage").html(dragons.data.skillNo2.damage);
       $(".dragon_skill2-shield").html(dragons.data.skillNo2.shield);
-      $(".dragon_skill2-level").html(dragons.data.skillNo2.level - 1 + ' ⇧');
+      for (var star = 0; star < dragons.data.skillNo2.level - 1; star++) {
+        $(".dragon_skill2-level").append('⭐');
+      }
       $(".dragon_skill-part2").html(dragons.data.parts[3].dnaNameEn);
 
       $(".dragon_skill3").html(dragons.data.skillNo3.name);
@@ -293,7 +304,9 @@ function retrieveDragon(inputData) {
       $(".dragon_skill3-description").html(dragons.data.skillNo3.des);
       $(".dragon_skill3-damage").html(dragons.data.skillNo3.damage);
       $(".dragon_skill3-shield").html(dragons.data.skillNo3.shield);
-      $(".dragon_skill3-level").html(dragons.data.skillNo3.level - 1 + ' ⇧');
+      for (var star = 0; star < dragons.data.skillNo3.level - 1; star++) {
+        $(".dragon_skill3-level").append('⭐');
+      }
       $(".dragon_skill-part3").html(dragons.data.parts[4].dnaNameEn);
 
       $(".dragon_skill4").html(dragons.data.skillNo4.name);
@@ -301,7 +314,9 @@ function retrieveDragon(inputData) {
       $(".dragon_skill4-description").html(dragons.data.skillNo4.des);
       $(".dragon_skill4-damage").html(dragons.data.skillNo4.damage);
       $(".dragon_skill4-shield").html(dragons.data.skillNo4.shield);
-      $(".dragon_skill4-level").html(dragons.data.skillNo4.level - 1 + ' ⇧');
+      for (var star = 0; star < dragons.data.skillNo4.level - 1; star++) {
+        $(".dragon_skill4-level").append('⭐');
+      }
       $(".dragon_skill-part4").html(dragons.data.parts[5].dnaNameEn);
 
 
