@@ -68,6 +68,7 @@
 
     <div class="changeLogsContent dropdown_Picker hide">
       <p class="small-text">
+        <b>02/15/22.</b> Released v0.0.8. Added Bloodline (Parents) and Upgrade Details. <br />
         <b>02/14/22.</b> Released v0.0.7. Updated Parts and Skill upgrades UI. <br />
         <b>02/12/22.</b> Released v0.0.6. Code refactor + Updated Header UI. <br />
         <b>02/06/22.</b> Released v0.0.5. Updated parts to display mutation tags. <br />
@@ -119,8 +120,7 @@
       <div class="dragon_showCase col l6 m6 s12">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <div class="dragon_body">
-
+            <div class="dragon_body dragonIndividual">
               <div class="dragon_body-tail"></div>
               <div class="dragon_body-horn"></div>
               <div class="dragon_body-ear"></div>
@@ -131,6 +131,7 @@
               <div class="dragon_body-egg"></div>
             </div>
           </div>
+
           <div class="card-content">
             <div class="card-title activator grey-text text-darken-4">
               <span class="dragon_number"></span>
@@ -174,6 +175,48 @@
               <div class="col l6 detail-icon valign-wrapper"><span class="parts-wing"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Wing">Wings</i> <span class="dragon_parts-wing"></span></div>
               <div class="col l6 detail-icon valign-wrapper"><span class="parts-tail"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Tail">Tail</i> <span class="dragon_parts-tail"></span></div>
             </div>
+
+            <p class="detail_section">Bloodline</p>
+            <div class="dragon_parent">
+              <div class="dragon_body dragon_parentFather">
+                <p class="dragonNo"></p>
+                <a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a>
+                <div class="dragon_body-tail"></div>
+                <div class="dragon_body-horn"></div>
+                <div class="dragon_body-ear"></div>
+                <div class="dragon_body-body"></div>
+                <div class="dragon_body-wing"></div>
+                <div class="dragon_body-totem"></div>
+                <div class="dragon_body-eyes"></div>
+              </div>
+
+              <div class="dragon_body dragon_parentMother">
+                <p class="dragonNo"></p>
+                <a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a>
+                <div class="dragon_body-tail"></div>
+                <div class="dragon_body-horn"></div>
+                <div class="dragon_body-ear"></div>
+                <div class="dragon_body-body"></div>
+                <div class="dragon_body-wing"></div>
+                <div class="dragon_body-totem"></div>
+                <div class="dragon_body-eyes"></div>
+              </div>
+            </div>
+
+            <div class="dragon_children"></div>
+
+            <p class="detail_section">Upgrade History</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Upgrade</th>
+                </tr>
+              </thead>
+
+              <tbody class="upgradeTable">
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

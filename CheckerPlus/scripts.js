@@ -1,8 +1,10 @@
 // Process input
 $(".getInput").click(function() {
-  var inputData = '{"no":"' + $(".dragonNo").val() + '"}';
+  var dragonData2 = '{"no":"' + $(".dragonNo").val() + '"}';
+  var upgradeData2 = '{"no":"' + $(".dragonNo").val() + '", limit: 20}';
   //var inputData = '{"no":"21887"}';
-  retrieveDragon(inputData);
+  retrieveDragon(dragonData2);
+  getDragonUpgrades(upgradeData2);
   var newURL = 'index.html?dragon=' + $(".dragonNo").val();
   window.history.replaceState(null, null, newURL);
 });
@@ -11,51 +13,54 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const dragon = urlParams.get('dragon') || '';
 
-var inputData = '{"no":"' + dragon + '"}';
-retrieveDragon(inputData);
+var dragonData = '{"no":"' + dragon + '"}';
+var upgradeData = '{"no":"' + dragon + '", limit: 20}';
+retrieveDragon(dragonData);
+getDragonUpgrades(upgradeData);
 
-function retrieveDragon(inputData) {
+function retrieveDragon(dragonData) {
   $.ajax({
     type: "POST",
     url: 'https://dragonmainland.io/api/game/hero/getHeroDetailByNo',
     dataType: "json",
-    data: inputData,
+    data: dragonData,
     contentType: "application/json; charset=utf-8",
     dataType: "json",
     success: function(data) {
 
       var dragons = data;
       var marketLink = 'https://dragonmainland.io/#/myMainland/myDragonDetail/';
-      console.log(dragons.data);
+
+      var bloodlineData = '{"heroId":' + dragons.data.id + '}';
+      getDragonBloodline(bloodlineData);
 
       $(".dragon_number").html('#' + dragons.data.no);
       $(".link-out").attr('href', marketLink + dragons.data.id);
 
-
       switch (dragons.data.clazz) {
         case 1:
           $(".dragon_number").removeClass().addClass('dragon_number dragon_type-water');
-          $(".dragon_body").removeClass().addClass('dragon_body dragon_card-contentWater');
+          $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentWater');
           break;
 
         case 2:
           $(".dragon_number").removeClass().addClass('dragon_number dragon_type-fire');
-          $(".dragon_body").removeClass().addClass('dragon_body dragon_card-contentFire');
+          $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentFire');
           break;
 
         case 3:
           $(".dragon_number").removeClass().addClass('dragon_number dragon_type-rock');
-          $(".dragon_body").removeClass().addClass('dragon_body dragon_card-contentRock');
+          $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentRock');
           break;
 
         case 4:
           $(".dragon_number").removeClass().addClass('dragon_number dragon_type-storm');
-          $(".dragon_body").removeClass().addClass('dragon_body dragon_card-contentStorm');
+          $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentStorm');
           break;
 
         case 5:
           $(".dragon_number").removeClass().addClass('dragon_number dragon_type-thunder');
-          $(".dragon_body").removeClass().addClass('dragon_body dragon_card-contentThunder');
+          $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentThunder');
           break;
         default:
 
@@ -271,13 +276,13 @@ function retrieveDragon(inputData) {
       $(".dragon_parts-wing").html(dragons.data.parts[4].dnaNameEn + '<i class="partMutation"> ' + part5Mutation + '</i>');
       $(".dragon_parts-tail").html(dragons.data.parts[5].dnaNameEn + '<i class="partMutation"> ' + part6Mutation + '</i>');
 
-      $(".dragon_body-eyes").attr("class", 'activator dragon_body-eyes dragon-' + dragons.data.parts[0].dnaNameEn.replace(/\s/g, ''));
-      $(".dragon_body-totem").attr("class", 'activator dragon_body-totem dragon-' + dragons.data.parts[1].dnaNameEn.replace(/\s/g, ''));
-      $(".dragon_body-horn").attr("class", 'activator dragon_body-horn dragon-' + dragons.data.parts[2].dnaNameEn.replace(/\s/g, ''));
-      $(".dragon_body-ear").attr("class", 'activator dragon_body-ear dragon-' + dragons.data.parts[3].dnaNameEn.replace(/\s/g, ''));
-      $(".dragon_body-wing").attr("class", 'activator dragon_body-wing dragon-' + dragons.data.parts[4].dnaNameEn.replace(/\s/g, ''));
-      $(".dragon_body-tail").attr("class", 'activator dragon_body-tail dragon-' + dragons.data.parts[5].dnaNameEn.replace(/\s/g, ''));
-      $(".dragon_body-body").attr("class", 'activator dragon_body-body dragon-' + dragons.data.parts[6].dnaNameEn.replace(/\s/g, ''));
+      $(".dragonIndividual .dragon_body-eyes").attr("class", 'activator dragon_body-eyes dragon-' + dragons.data.parts[0].dnaNameEn.replace(/\s/g, ''));
+      $(".dragonIndividual .dragon_body-totem").attr("class", 'activator dragon_body-totem dragon-' + dragons.data.parts[1].dnaNameEn.replace(/\s/g, ''));
+      $(".dragonIndividual .dragon_body-horn").attr("class", 'activator dragon_body-horn dragon-' + dragons.data.parts[2].dnaNameEn.replace(/\s/g, ''));
+      $(".dragonIndividual .dragon_body-ear").attr("class", 'activator dragon_body-ear dragon-' + dragons.data.parts[3].dnaNameEn.replace(/\s/g, ''));
+      $(".dragonIndividual .dragon_body-wing").attr("class", 'activator dragon_body-wing dragon-' + dragons.data.parts[4].dnaNameEn.replace(/\s/g, ''));
+      $(".dragonIndividual .dragon_body-tail").attr("class", 'activator dragon_body-tail dragon-' + dragons.data.parts[5].dnaNameEn.replace(/\s/g, ''));
+      $(".dragonIndividual .dragon_body-body").attr("class", 'activator dragon_body-body dragon-' + dragons.data.parts[6].dnaNameEn.replace(/\s/g, ''));
 
       var star;
       $(".dragon_skill1").html(dragons.data.skillNo1.name);
@@ -440,8 +445,201 @@ function retrieveDragon(inputData) {
 
         default:
       }
+    }
+  });
+}
 
+function getDragonUpgrades(upgradeData) {
+  $.ajax({
+    type: "POST",
+    url: 'https://dragonmainland.io/api/game/hero/getHeroDevelopHistory',
+    dataType: "json",
+    data: upgradeData,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data) {
 
+      var dragonUpgrade = data.data.list;
+      var upgradeType;
+      var attributeName;
+      var attributeType;
+
+      $('.upgradeTable').empty();
+      for (var z = 0; z < dragonUpgrade.length; z++) {
+        upgradeType = '';
+        switch (dragonUpgrade[z].type) {
+          case 1:
+            upgradeType = 'Skull Absorption';
+            attributeName = '';
+            break;
+
+          case 3:
+            upgradeType = 'Dragon Devour';
+            attributeName = dragonUpgrade[z].attributeName;
+            break;
+
+          case 4:
+            upgradeType = 'Dragon Devour';
+            attributeName = dragonUpgrade[z].attributeName;
+            break;
+
+          case 5:
+            upgradeType = 'Dragon Devour';
+            attributeName = dragonUpgrade[z].attributeName;
+            break;
+
+          case 6:
+            upgradeType = 'Dragon Devour';
+            attributeName = dragonUpgrade[z].attributeName;
+            break;
+
+          case 7:
+            upgradeType = 'Talent Upgrade';
+            attributeName = '';
+            break;
+          default:
+        }
+
+        attributeType = '';
+
+        switch (dragonUpgrade[z].attributeType) {
+          case 1:
+            attributeType = '<i class="fas fa-heart"></i> Health';
+            break;
+
+          case 2:
+            attributeType = '<i class="fas fa-sword"></i> Attack';
+            break;
+
+          case 3:
+            attributeType = '<i class="fas fa-shield"></i> Defense';
+            break;
+
+          case 4:
+            attributeType = '<i class="fas fa-boot"></i> Speed';
+            break;
+
+          case 5:
+            attributeType = '<i class="fas fa-fire"> Intellect';
+            break;
+          default:
+        }
+
+        $('.upgradeTable').append('<tr><td>' + upgradeType + '</td><td><i class="fa-solid fa-arrow-trend-up"></i> ' + attributeName + attributeType + ' </td><td><span class="grey-text text-darken-2">' + (dragonUpgrade[z].oldAttributeVal - 1) + '</span> <i class="fa-solid fa-chevrons-right fa-2xs"></i> <span class="green-text text-darken-3"><b>' + (dragonUpgrade[z].newAttributeVal - 1) + '</b></span></td></tr>')
+      }
+    }
+  });
+}
+
+function getDragonBloodline(bloodlineData) {
+  $.ajax({
+    type: "POST",
+    url: 'https://dragonmainland.io/api/game/hero/getHeroFamily',
+    dataType: "json",
+    data: bloodlineData,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data) {
+      if (data.data.fatherId != '' || data.data.motherId != '') {
+        $('.dragon_parent').show();
+        var fatherNo = '{"id":"' + data.data.fatherId + '"}';
+        var motherNo = '{"id":"' + data.data.motherId + '"}';
+
+        getBloodlineParts(fatherNo, 'Father');
+        getBloodlineParts(motherNo, 'Mother');
+
+        /*console.log('parents done');
+        var child = data.data.childIds;
+        if (child.length > 0) {
+          for (var c = 0; c < child.length; c++) {
+            console.log(child[c]);
+            getBloodlineParts(child[c], 'Child');
+            console.log('done');
+          }
+        }*/
+      }
+
+      else {
+          $('.dragon_parent').hide();
+      }
+    }
+  });
+}
+
+function getBloodlineParts(dragonNo, bloodRelation) {
+  $.ajax({
+    type: "POST",
+    url: 'https://dragonmainland.io/api/game/hero/detail',
+    dataType: "json",
+    data: dragonNo,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data) {
+
+      var dragonInsert;
+      var family;
+
+      var relative = data.data;
+      //console.log(dragonNo + ' || ' + bloodRelation);
+      //console.log(relative);
+
+      switch (bloodRelation) {
+        case 'Father':
+          family = 'Father';
+          break;
+
+        case 'Mother':
+          family = 'Mother';
+          break;
+
+        case 'Child':
+          family = 'Child';
+          break;
+        default:
+
+      }
+
+      $(".dragon_parent" + bloodRelation + " .dragon_body-eyes").attr("class", ' activator dragon_body-eyes dragon-' + relative.parts[0].dnaNameEn.replace(/\s/g, ''));
+      $(".dragon_parent" + bloodRelation + " .dragon_body-totem").attr("class", ' activator dragon_body-totem dragon-' + relative.parts[1].dnaNameEn.replace(/\s/g, ''));
+      $(".dragon_parent" + bloodRelation + " .dragon_body-horn").attr("class", ' activator dragon_body-horn dragon-' + relative.parts[2].dnaNameEn.replace(/\s/g, ''));
+      $(".dragon_parent" + bloodRelation + " .dragon_body-ear").attr("class", ' activator dragon_body-ear dragon-' + relative.parts[3].dnaNameEn.replace(/\s/g, ''));
+      $(".dragon_parent" + bloodRelation + " .dragon_body-wing").attr("class", ' activator dragon_body-wing dragon-' + relative.parts[4].dnaNameEn.replace(/\s/g, ''));
+      $(".dragon_parent" + bloodRelation + " .dragon_body-tail").attr("class", ' activator dragon_body-tail dragon-' + relative.parts[5].dnaNameEn.replace(/\s/g, ''));
+      $(".dragon_parent" + bloodRelation + " .dragon_body-body").attr("class", ' activator dragon_body-body dragon-' + relative.parts[6].dnaNameEn.replace(/\s/g, ''));
+      $(".dragon_parent" + bloodRelation + " .link-out").attr('href', relative.id);
+
+      switch (relative.clazz) {
+        case 1:
+          $(".dragon_parent" + bloodRelation + " .dragonNo").html('#' + relative.no).removeClass().addClass("dragon_parent" + bloodRelation + " dragonNo dragon_type-water");
+          break;
+
+        case 2:
+          $(".dragon_parent" + bloodRelation + " .dragonNo").html('#' + relative.no).removeClass().addClass("dragon_parent" + bloodRelation + " dragonNo dragon_type-fire");
+
+          break;
+
+        case 3:
+          $(".dragon_parent" + bloodRelation + " .dragonNo").html('#' + relative.no).removeClass().addClass("dragon_parent" + bloodRelation + " dragonNo dragon_type-rock");
+
+          break;
+
+        case 4:
+          $(".dragon_parent" + bloodRelation + " .dragonNo").html('#' + relative.no).removeClass().addClass("dragon_parent" + bloodRelation + " dragonNo dragon_type-storm");
+
+          break;
+
+        case 5:
+          $(".dragon_parent" + bloodRelation + " .dragonNo").html('#' + relative.no).removeClass().addClass("dragon_parent" + bloodRelation + " dragonNo dragon_type-thunder");
+
+          break;
+        default:
+      }
+
+      /*if (family == 'Child') {
+        console.log('entered child');
+        dragonInsert = '<div class="dragon_body ' + family + '"><p class="dragonNo"></p><a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a><div class="dragon_body-tail"></div><div class="dragon_body-horn"></div><div class="dragon_body-ear"></div><div class="dragon_body-body"></div><div class="dragon_body-wing"></div><div class="dragon_body-totem"></div><div class="dragon_body-eyes"></div><div class="dragon_body-egg"></div></div>';
+        $('.dragon_children').append(dragonInsert);
+      }*/
     }
   });
 }
