@@ -28,7 +28,7 @@
 }
 
 .dropdown_Picker {
-  position: absolute;
+  position: fixed;
   background-color: white;
   border-radius: 5px;
   z-index: 2;

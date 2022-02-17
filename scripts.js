@@ -29,18 +29,31 @@ function copyWallet() {
   navigator.clipboard.writeText(copyText.value);
 }
 
-// Parallax Settings
-document.addEventListener("mousemove", parallax);
-const elem = document.querySelector("#parallax");
+$('.tabs .tab').click(function() {
+  $('.tab-panel').addClass('hide');
+  $('.' + $(this).attr('data-tab')).removeClass('hide');
+});
 
-function parallax(e) {
-  let _w = window.innerWidth / 2;
-  let _h = window.innerHeight / 2;
-  let _mouseX = e.clientX;
-  let _mouseY = e.clientY;
-  let _depth1 = `${20 - (_mouseX - _w) * 0.002}% ${20 - (_mouseY - _h) * 0.002}%`;
-  let _depth2 = `${20 - (_mouseX - _w) * 0.002}% ${20 - (_mouseY - _h) * 0.002}%`;
-  let _depth3 = `${20 - (_mouseX - _w) * 0.002}% ${20 - (_mouseY - _h) * 0.002}%`;
-  let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-  elem.style.backgroundPosition = x;
+var currentYear = new Date().getFullYear();
+
+$('.currentYear').html(currentYear);
+
+//Get the button
+var scrollToTop = document.getElementById("goToTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTop.style.display = "block";
+  } else {
+    scrollToTop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

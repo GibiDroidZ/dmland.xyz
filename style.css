@@ -2,6 +2,10 @@
   font-family: Lato;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: white;
 }
@@ -18,88 +22,130 @@ a {
   z-index: -1;
 }
 
-.side_bar {
-  position: fixed;
-  width: 200px;
+#parallax {
+  position: relative;
+  background-attachment: fixed;
+}
+
+.content1,
+.content2,
+.content3,
+.content4,
+.content5 {
   display: inline-block;
-  background-color: RGBA(255, 255, 255, .5);
   height: 100vh;
-  padding: 30px 0;
-  text-align: center;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.main_content {
-  width: calc(100% - 200px);
-  margin-left: 200px;
-  padding: 20px;
-}
-
-.side_bar ul li a {
-  padding: 15px 5px;
   width: 100%;
-  display: block;
-  padding-left: 20px;
-  color: black;
-  text-align: left;
 }
 
-.side_bar ul li a:hover {
+.content1 .container,
+.content2 .container,
+.content3 .container,
+.content4 .container,
+.content5 .container {
+  height: 100vh;
+}
+
+.content1 {
+  background-image:
+    url('assets/Front.png'),
+    url('assets/Mid.png'),
+    url('assets/Back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-color: #221717;
+}
+
+.content3 {
+  background-image: url('assets/Section.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content5 {
+  background-image: url('assets/Logs.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content2 {
   background-color: white;
 }
 
-.pill {
-  background-color: red;
-  color: white;
-  border-radius: 3px;
-  padding: 3px 5px;
-  font-size: 8px;
-  vertical-align: top;
+.content4 {
+  background-color: #6b6b6b;
 }
 
-.categ_label {
-  border-bottom: 1px solid RGBA(0, 0, 0, 0.5);
-  font-size: 20px;
-  padding: 0 10px;
-  margin: 10px;
-  text-align: left;
-}
-
-.creator img {
-  height: 40px;
-  border-radius: 20px;
-}
-
-.creator {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-
-.creator div {
-  display: inline-block;
-  font-weight: bold;
-  margin-left: 5px;
-  font-size: 15px;
-}
-
-.panel {
-  padding: 10px 20px;
+.glass,
+.glass:active,
+.glass:focus {
   background-color: RGBA(255, 255, 255, .5);
-  border-radius: 10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.padder {
-  margin-bottom: 10px;
+.appIcon {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
 }
 
-.main_content h5 {
-  border-bottom: 1px solid RGBA(0, 0, 0, .5);
+.appIcon:hover,
+#goToTop:hover {
+  box-shadow: 0 10px 10px RGBA(0, 0, 0, .3);
+}
+
+.featureTitle {
+  font-size: 50px;
+  width: 100%;
+}
+
+.featureTitle a {
+  color: black;
+  font-weight: bold;
+}
+
+.featureTitle a:hover {
+  text-decoration: underline;
+}
+
+.featureTitle i:not('featureIcon') {
+  font-size: 70px;
+}
+
+.tab-panel {
+  height: 300px;
+  padding: 20px;
+  margin-top: 70px;
+  border-radius: 5px;
+}
+
+.tabs .tab {
+  width: initial !important;
+}
+
+.content5 .col {
+  padding: 0;
+}
+
+.content5 .row {
+  width: 100%;
+}
+
+.content5 .tabs {
+  border-radius: 5px;
+}
+
+#goToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  cursor: pointer;
 }

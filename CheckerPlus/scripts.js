@@ -811,7 +811,7 @@ function getBloodlineParts(dragonNo, bloodRelation) {
       $(".dragon_" + bloodRelation + ".dragon-" + relative.no + " .dragon_body-wing").attr("class", ' activator dragon_body-wing dragon-' + relative.parts[4].dnaNameEn.replace(/\s/g, ''));
       $(".dragon_" + bloodRelation + ".dragon-" + relative.no + " .dragon_body-tail").attr("class", ' activator dragon_body-tail dragon-' + relative.parts[5].dnaNameEn.replace(/\s/g, ''));
       $(".dragon_" + bloodRelation + ".dragon-" + relative.no + " .dragon_body-body").attr("class", ' activator dragon_body-body dragon-' + relative.parts[6].dnaNameEn.replace(/\s/g, ''));
-      $(".dragon_" + bloodRelation + ".dragon-" + relative.no + " .link-out").attr('href', relative.id);
+      $(".dragon_" + bloodRelation + ".dragon-" + relative.no + " .link-out").attr('href', 'index.html?dragon=' + relative.no);
 
       switch (relative.clazz) {
         case 1:
