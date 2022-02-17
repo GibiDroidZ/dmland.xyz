@@ -1,4 +1,4 @@
-// Dark Mode
+  // Dark Mode
 $('.darkModeTrigger').click(function() {
 $('.product_item').toggleClass('dark-mode');
 $(this).toggleClass('active');
@@ -585,6 +585,7 @@ function loadMarketPlace() {
       for (var i = 0; i < product.length; i++) {
 
         // Get mutation/tag
+        /*
         switch (product[i].heroVo.mutation) {
           case 0:
             p_tag = '';
@@ -602,6 +603,30 @@ function loadMarketPlace() {
             break;
 
           case 4:
+            p_tag = 'Mystic';
+            p_tagClass = 'product_tag-mystic';
+            break;
+          default:
+
+        }*/
+
+        switch (true) {
+          case (product[i].heroVo.mutation == 0):
+            p_tag = '';
+            p_tagClass = '';
+            break;
+
+          case (product[i].heroVo.mutation < 0):
+            p_tag = 'Negative';
+            p_tagClass = 'product_tag-negative';
+            break;
+
+          case (product[i].heroVo.mutation == 2):
+            p_tag = 'Rare';
+            p_tagClass = 'product_tag-rare';
+            break;
+
+          case (product[i].heroVo.mutation <= 4):
             p_tag = 'Mystic';
             p_tagClass = 'product_tag-mystic';
             break;

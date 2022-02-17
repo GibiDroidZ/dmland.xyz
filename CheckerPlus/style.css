@@ -390,8 +390,9 @@ a {
   font-size: 18px;
 }
 
-.dragon_body.dragon_parentFather .activator,
-.dragon_body.dragon_parentMother .activator {
+.dragon_body.dragon_Father .activator,
+.dragon_body.dragon_Mother .activator,
+.dragon_body.dragon_Child .activator {
   background-size: 120px;
   height: 120px;
   width: 120px;
@@ -400,25 +401,45 @@ a {
   right: initial;
 }
 
-.dragon_body.dragon_parentFather,
-.dragon_body.dragon_parentMother {
+.dragon_body.dragon_Father .activator {
+  left: calc(25% - 60px);
+  right: calc(25% - 60px);
+}
+
+.dragon_body.dragon_Mother .activator {
+  left: calc(75% - 60px);
+  right: calc(75% - 60px);
+}
+
+.dragon_body.dragon_Mother {
+  border: 1px solid rgb(143, 0, 76);
+}
+
+.dragon_body.dragon_Father {
+  border: 1px solid rgb(0, 69, 143);
+}
+
+.dragon_body.dragon_Child {
+  border: 1px solid rgb(80, 80, 80);
+}
+
+.dragon_body.dragon_Father,
+.dragon_body.dragon_Mother,
+.dragon_body.dragon_Child {
   width: 120px;
   height: 140px;
   display: inline-block;
   border-radius: 5px;
+  border-bottom-width: 5px;
 }
 
-.dragon_body.dragon_parentMother {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(143, 0, 76, 0) 80%, rgba(143, 0, 76, 1) 100%);
+.dragon_body.dragon_Father,
+.dragon_body.dragon_Mother {
+  width: calc((100% - 3px) / 2);
 }
 
-.dragon_body.dragon_parentFather {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 69, 143, 0) 80%, rgba(0, 69, 143, 1) 100%);
-}
-
-.dragon_parent .dragonNo {
+.dragon_parent .dragonNo,
+.dragon_children .dragonNo {
   display: inline-block;
   color: white;
   padding: 2px 5px;
@@ -442,9 +463,46 @@ a {
 .dragon_parent,
 .dragon_children {
   display: inline-block;
+  width: 100%;
 }
 
 .dragon_children {
-  border-left: 1px solid gray;
-  margin-left: 5px;
+  margin: 3px 0;
+}
+
+.dragon_children .dragon_body {
+  margin: 3px;
+}
+
+.dragon_children .dragon_body:first-child {
+  margin-left: 0;
+}
+
+.dragon_children .dragon_body:last-child {
+  margin-right: 0;
+}
+
+.dragon_hiddenSection {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: RGB(240, 240, 240);
+  padding: 20px 10px;
+  cursor: pointer;
+}
+
+.dragon_bloodLine .detail_section {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 10px 20px;
+}
+
+.noBottomMargin {
+  margin-bottom: 0;
+}
+
+.dragon_bloodLineToggle {
+  margin-top: 20px;
 }

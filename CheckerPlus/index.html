@@ -11,15 +11,12 @@
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous"
-    referrerpolicy="no-referrer" /-->
 
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="icon" href="../assets/DM-logo.png">
-
 
   <link href="../general.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
@@ -30,12 +27,7 @@
 <body id="parallax">
   <div class="bg_overlay"></div>
 
-  <!--div class="no-mobile">
-    <p>This version of DM.gg is not available on smaller screens at the moment!</p>
-  </div-->
-
   <main class='body row'>
-
     <nav class="navBar grey darken-4">
       <div class="">
         <a href="../index.html" class="site_Logo left"><img src="../assets/DM-logo.png" alt="DM logo" /></a>
@@ -176,37 +168,61 @@
               <div class="col l6 detail-icon valign-wrapper"><span class="parts-tail"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Tail">Tail</i> <span class="dragon_parts-tail"></span></div>
             </div>
 
-            <p class="detail_section">Bloodline</p>
-            <div class="dragon_parent">
-              <div class="dragon_body dragon_parentFather">
-                <p class="dragonNo"></p>
-                <a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a>
-                <div class="dragon_body-tail"></div>
-                <div class="dragon_body-horn"></div>
-                <div class="dragon_body-ear"></div>
-                <div class="dragon_body-body"></div>
-                <div class="dragon_body-wing"></div>
-                <div class="dragon_body-totem"></div>
-                <div class="dragon_body-eyes"></div>
+            <p class="detail_section noBottomMargin">Bloodline</p>
+            <div class="dragon_hiddenSection dragon_bloodLineToggle">
+              Click to show <i class="fa-duotone fa-eye"></i> <br />
+            </div>
+
+            <div class="dragon_hiddenSection dragon_bloodLineToggle noData hide">
+              No data <i class="fa-duotone fa-binary-slash"></i> <br />
+            </div>
+
+            <div class="dragon_bloodLine">
+              <div class="dragon_parent hide">
+                <p class="detail_section">Parents</p>
+                <div class="dragon_body dragon_Father">
+                  <p class="dragonNo"></p>
+                  <a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a>
+                  <div class="">
+                    <div class="dragon_body-tail"></div>
+                    <div class="dragon_body-horn"></div>
+                    <div class="dragon_body-ear"></div>
+                    <div class="dragon_body-body"></div>
+                    <div class="dragon_body-wing"></div>
+                    <div class="dragon_body-totem"></div>
+                    <div class="dragon_body-eyes"></div>
+                  </div>
+                </div>
+
+                <div class="dragon_body dragon_Mother">
+                  <p class="dragonNo"></p>
+                  <a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a>
+                  <div class="">
+                    <div class="dragon_body-tail"></div>
+                    <div class="dragon_body-horn"></div>
+                    <div class="dragon_body-ear"></div>
+                    <div class="dragon_body-body"></div>
+                    <div class="dragon_body-wing"></div>
+                    <div class="dragon_body-totem"></div>
+                    <div class="dragon_body-eyes"></div>
+                  </div>
+                </div>
               </div>
 
-              <div class="dragon_body dragon_parentMother">
-                <p class="dragonNo"></p>
-                <a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a>
-                <div class="dragon_body-tail"></div>
-                <div class="dragon_body-horn"></div>
-                <div class="dragon_body-ear"></div>
-                <div class="dragon_body-body"></div>
-                <div class="dragon_body-wing"></div>
-                <div class="dragon_body-totem"></div>
-                <div class="dragon_body-eyes"></div>
+              <div class="dragon_children">
               </div>
             </div>
 
-            <div class="dragon_children"></div>
-
             <p class="detail_section">Upgrade History</p>
-            <table>
+            <div class="dragon_hiddenSection dragon_upgradeToggle">
+              Click to show <i class="fa-duotone fa-eye"></i> <br />
+            </div>
+
+            <div class="dragon_hiddenSection dragon_upgradeToggle noData hide">
+              No data <i class="fa-duotone fa-binary-slash"></i> <br />
+            </div>
+
+            <table class="dragon_updateTable hide">
               <thead>
                 <tr>
                   <th>Type</th>
@@ -214,7 +230,7 @@
                 </tr>
               </thead>
 
-              <tbody class="upgradeTable">
+              <tbody>
               </tbody>
             </table>
           </div>
