@@ -44,3 +44,5 @@ function parallax(e) {
   let x = `${_depth3}, ${_depth2}, ${_depth1}`;
   elem.style.backgroundPosition = x;
 }
+
+//https://api.coingecko.com/api/v3/simple/token_price/binance-smart-chain?contract_addresses=0x9a26e6d24df036b0b015016d1b55011c19e76c87&vs_currencies=USD
