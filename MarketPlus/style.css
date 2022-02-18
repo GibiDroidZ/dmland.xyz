@@ -138,7 +138,7 @@
 }
 
 .ui-slider {
-  background-color: white;
+  background-color: white !important;
 }
 
 .bg_overlay {
