@@ -38,9 +38,15 @@
       <ul class="left">
         <li class="app_Picker"><i class="fa-duotone fa-grid"></i></li>
       </ul>
+
       <ul class="right">
         <li class="notice"><i class="fa-solid fa-triangle-exclamation"></i></li>
       </ul>
+
+      <div class="tokenPrices right">
+        <div class="DMS_Price"></div>
+        <div class="DMP_Price"></div>
+      </div>
     </div>
   </nav>
 
@@ -56,6 +62,13 @@
       <a href="./MarketPlus/index.html">
         <i class="fa-duotone fa-bag-shopping fa-2xl"></i><br />
         Market <i class="fa-solid fa-square-plus"></i>
+      </a>
+    </div>
+
+    <div class="col l6 m6 s6 no-margin">
+      <a href="./BreedingPlus/index.html">
+        <i class="fa-duotone fa-egg-fried fa-2xl"></i><br />
+        Breeding <i class="fa-solid fa-square-plus"></i>
       </a>
     </div>
   </div>
@@ -113,6 +126,26 @@
           </div>
 
           <div class="col l6 m6 s6">
+            <a href="#BuilderPlus" class="black-text">
+              <div class="appIcon glass">
+                <h4><i class="fa-duotone fa-puzzle fa-2xl"></i></h4>
+                <br />
+                <b>BUILDER <i class="fa-solid fa-square-plus"></i></b>
+              </div>
+            </a>
+          </div>
+
+          <div class="col l6 m6 s6">
+            <a href="#ExplorerPlus" class="black-text">
+              <div class="appIcon glass">
+                <h4><i class="fa-duotone fa-card-diamond fa-2xl"></i></h4>
+                <br />
+                <b>EXPLORER <i class="fa-solid fa-square-plus"></i></b>
+              </div>
+            </a>
+          </div>
+
+          <div class="col l6 m6 s6">
             <a href="#More" class="black-text">
               <div class="appIcon glass">
                 <h4><i class="fa-duotone fa-arrow-right fa-2xl"></i></h4>
@@ -136,7 +169,7 @@
           </a>
         </div>
 
-        <div class="col l7 m12 s12">
+        <div class="col l7 m12 s12 right-align">
           <h4>Check the details of your dragon, even if it's still an egg!</h4>
         </div>
       </div>
@@ -169,22 +202,60 @@
     <div class="container valign-wrapper">
       <div class="row">
         <div class="col l5 m12 s12">
-          <div class="featureTitle right-align">
-            <a href="#">
+          <div class="featureTitle">
+            <a href="./BreedingPlus/index.html">
               <i class="fa-duotone fa-egg-fried fa-2xl"></i>
               Breeding <i class="fa-solid fa-square-plus"></i>
             </a>
           </div>
         </div>
 
-        <div class="col l7 m12 s12">
+        <div class="col l7 m12 s12 right-align">
           <h4>Take your breeding to the next level!</h4>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="content5" id="More">
+  <div class="content5" id="BuilderPlus">
+    <div class="container valign-wrapper">
+      <div class="row">
+        <div class="col l7 m12 s12">
+          <h4>Build your dream dragon!</h4>
+        </div>
+
+        <div class="col l5 m12 s12">
+          <div class="featureTitle right-align">
+            <a href="#">
+              <i class="fa-duotone fa-puzzle fa-2xl"></i>
+              Builder <i class="fa-solid fa-square-plus"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content6" id="ExplorerPlus">
+    <div class="container valign-wrapper">
+      <div class="row">
+        <div class="col l5 m12 s12">
+          <div class="featureTitle">
+            <a href="#">
+              <i class="fa-duotone fa-card-diamond fa-2xl"></i>
+              Explorer <i class="fa-solid fa-square-plus"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col l7 m12 s12 right-align">
+          <h4>Explore the vast selection of cards!</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contentLast" id="More">
     <div class="container valign-wrapper">
       <div class="row">
         <h2>Changelogs</h2>
@@ -193,12 +264,14 @@
             <li class="tab col s3" data-tab="DMLandTabContent"><a class="black-text active" href="#DML"><i class="fa-duotone fa-dragon"></i></a></li>
             <li class="tab col s3" data-tab="checkerTabContent"><a class="black-text" href="#Checker"><i class="fa-duotone fa-badge-check fa-2xl"></i></a></li>
             <li class="tab col s3" data-tab="marketTabContent"><a class="black-text" href="#Market"><i class="fa-duotone fa-bag-shopping fa-2xl"></i></a></li>
+            <li class="tab col s3" data-tab="breedingTabContent"><a class="black-text" href="#Breeding"><i class="fa-duotone fa-egg-fried fa-2xl"></i></a></li>
           </ul>
         </div>
 
         <div class="tab-panel DMLandTabContent glass">
           <h5>DM Land</h5>
           <ul>
+            <li><b>02/21/22.</b> Released v0.0.6. Added DMP & DMS price. Also added section for Builder + and Explorer + </li>
             <li><b>02/17/22.</b> Released v0.0.5. Major Landing Page revamp! Pretty right? </li>
             <li><b>02/15/22.</b> Released v0.0.4. Slight UI revamp. Noticed the difference? We're now using Glass Morphism! :) </li>
             <li><b>02/14/22.</b> Released v0.0.3. Rebranded to DM Land (with a formal URL: DMLand.xyz) so it's easy to remember (easy as XYZ) ;) </li>
@@ -232,6 +305,13 @@
             <li><b>02/03/22.</b> Released v0.0.1. Release first initial version of Market +.</li>
           </ul>
         </div>
+
+        <div class="tab-panel hide breedingTabContent glass">
+          <h5>Breeding <i class="fa-solid fa-square-plus"></i></h5>
+          <ul>
+            <li><b>02/21/22.</b> Released v0.0.1. Released with basic breeding information.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -254,7 +334,7 @@
           <ul>
             <li><a class="grey-text text-lighten-3" href="./CheckerPlus/index.html">Checker <i class="fa-solid fa-square-plus"></i></a></li>
             <li><a class="grey-text text-lighten-3" href="./MarketPlus/index.html">Market <i class="fa-solid fa-square-plus"></i></a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Breeding <i class="fa-solid fa-square-plus"></i></a></li>
+            <li><a class="grey-text text-lighten-3" href="./BreedingPlus/index.html">Breeding <i class="fa-solid fa-square-plus"></i></a></li>
           </ul>
         </div>
       </div>

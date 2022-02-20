@@ -1,0 +1,132 @@
+* {
+  font-family: Lato;
+}
+
+a {
+  color: white;
+}
+
+.bg_overlay {
+  background-color: RGBA(0, 0, 0, .2);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.main_content {
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.panel {
+  padding: 10px 20px;
+  background-color: RGBA(255, 255, 255, .5);
+  border-radius: 5px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.dragon_body {
+  height: 350px;
+  display: block;
+}
+
+.dragon_showCase {
+  width: 25%;
+  display: inline-block;
+}
+
+.dragonSearch {
+  width: 100%;
+}
+
+.dragonSearchField {
+  width: calc(100% - 50px);
+}
+
+.dragonSearchIcon {
+  width: 50px;
+}
+
+.dragon_breedingWrapper {
+  width: calc(50% - 10px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dragon_breedingWrapper .panel {
+  margin: 0 5px;
+}
+
+.dragon_body .activator {
+  height: 300px;
+  width: 300px;
+  left: 0;
+  right: 0;
+  background-size: 400px;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.card-content .detail-icon {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.dragon_number,
+.dragon_tag {
+  border-radius: 5px;
+  min-width: 70px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  padding: 2px 5px;
+}
+
+.dragon_type-fire {
+  background-color: #d58047;
+}
+
+.dragon_type-water {
+  background-color: #44a3cf;
+}
+
+.dragon_type-storm {
+  background-color: #53b372;
+}
+
+.dragon_type-rock {
+  background-color: #926b59;
+}
+
+.dragon_type-thunder {
+  background-color: #d5b32d;
+}
+
+.dragon_showCase .link-out {
+  display: none;
+  color: black;
+}
+
+.dragon_showCase .card:hover .link-out {
+  display: inline-block;
+}
+
+.dragon_showCase .card {
+  border-radius: 5px;
+}
+
+.detail_section {
+  border-bottom: 1px solid RGBA(0, 0, 0, 0.5);
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.small_text {
+  font-size: 12px;
+}

@@ -41,8 +41,19 @@ a {
 .content2 .container,
 .content3 .container,
 .content4 .container,
-.content5 .container {
+.content5 .container,
+.content6 .container,
+.contentLast .container {
   height: 100vh;
+}
+
+.content2 .container .row,
+.content3 .container .row,
+.content4 .container .row,
+.content5 .container .row,
+.content6 .container .row,
+.contentLast .row {
+  width: 100%;
 }
 
 .content1 {
@@ -69,11 +80,21 @@ a {
   background-attachment: fixed;
 }
 
+.contentLast {
+  background-image: url('assets/Castle.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .content2 {
   background-color: white;
 }
 
 .content4 {
+  background-color: #6b6b6b;
+}
+
+.content6 {
   background-color: #6b6b6b;
 }
 
@@ -129,15 +150,15 @@ a {
   width: initial !important;
 }
 
-.content5 .col {
+.contentLast .col {
   padding: 0;
 }
 
-.content5 .row {
+.contentLast .row {
   width: 100%;
 }
 
-.content5 .tabs {
+.contentLast .tabs {
   border-radius: 5px;
 }
 
