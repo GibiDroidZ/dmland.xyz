@@ -130,3 +130,38 @@ a {
 .small_text {
   font-size: 12px;
 }
+
+.display_tile {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  height: 125px;
+}
+
+.display_tile .tileValue {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.display_tile i {
+  text-align: right;
+  font-size: 12px;
+}
+
+.display_tile .tileValue .total_breedingCost {
+  font-size: 45px;
+}
+
+.display_tile b {
+  font-size: 12px;
+}
+
+.USDC_icon {
+  background-image: url(../assets/USDC_Logo.png);
+  background-size: 30px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}

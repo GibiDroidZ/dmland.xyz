@@ -205,14 +205,14 @@ function retrieveDragon(dragonData, bloodRelation) {
         totalBreedingCostDMP = breedCostDMPFather + breedCostDMPMother;
         totalBreedingCostDMS = breedCostDMSFather + breedCostDMSMother;
 
-        $('.breedCost-DMP').html(totalBreedingCostDMP);
-        $('.breedCost-DMS').html(totalBreedingCostDMS);
+        $('.breedCost-DMP').html(Math.round(totalBreedingCostDMP * 100) / 100);
+        $('.breedCost-DMS').html(Math.round(totalBreedingCostDMS * 100) / 100);
 
         totalBreedingCostDMPUSD = Math.round((totalBreedingCostDMP * price_DMP) * 100) / 100;
         totalBreedingCostDMSUSD = Math.round((totalBreedingCostDMS * price_DMS) * 100) / 100;
         totalBreedingCostUSD = Math.round((totalBreedingCostDMPUSD + totalBreedingCostDMSUSD) * 100) / 100;
-        $('.total_DMSCost').html(totalBreedingCostDMSUSD);
-        $('.total_DMPCost').html(totalBreedingCostDMPUSD);
+        $('.total_DMSCost').html('~ $' + totalBreedingCostDMSUSD);
+        $('.total_DMPCost').html('~ $' + totalBreedingCostDMPUSD);
         $('.total_breedingCost').html(totalBreedingCostUSD);
       }
 

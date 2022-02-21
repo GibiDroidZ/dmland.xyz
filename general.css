@@ -180,14 +180,13 @@
 
 .DMS_icon,
 .DMP_icon {
-  height: 15px;
+  height: 16px;
   width: 20px;
-  background-size: 18px;
+  background-size: 13px;
   display: inline-block;
-}
-
-.DMS_icon {
-  height: 14px
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: sub;
 }
 
 .DMS_icon {
