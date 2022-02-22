@@ -231,12 +231,12 @@ a {
 }
 
 .skill_stats-damage {
-  top: 140px;
+  top: 160px;
   border-radius: 0 20px !important;
 }
 
 .skill_stats-damage-bg {
-  top: 160px;
+  top: 180px;
   height: 20px;
   left: -10px;
   width: 50px;
@@ -246,12 +246,12 @@ a {
 
 .skill_stats-shield {
   right: 0;
-  top: 140px;
+  top: 160px;
   border-radius: 20px 0 !important;
 }
 
 .skill_stats-shield-bg {
-  top: 160px;
+  top: 180px;
   height: 20px;
   right: -10px;
   width: 50px;
@@ -294,6 +294,10 @@ a {
 
 .dragon_card {
   border-radius: 10px !important;
+}
+
+.dragon_card .card-image {
+  min-height: 40px;
 }
 
 .dragon_card-content1,

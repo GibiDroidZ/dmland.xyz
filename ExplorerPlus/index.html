@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Explorer +</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../assets/DM-logo.png">
+
+  <link href="../general.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="../parts.css" rel="stylesheet">
+  <link href="../skill.css" rel="stylesheet">
+</head>
+
+<body id="parallax">
+  <div class="bg_overlay"></div>
+
+  <nav class="navBar grey darken-4">
+    <div class="">
+      <a href="../index.html" class="site_Logo left"><img src="../assets/DM-logo.png" alt="DM logo" /></a>
+
+      <ul class="left">
+        <li class="app_Picker"><i class="fa-duotone fa-grid"></i></li>
+      </ul>
+
+      <ul class="right">
+        <li class="changeLogs"><i class="fa-solid fa-memo"></i></li>
+        <li class="notice"><i class="fa-solid fa-triangle-exclamation"></i></li>
+      </ul>
+
+      <div class="tokenPrices right">
+        <div class="DMS_Price"></div>
+        <div class="DMP_Price"></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row app_PickerContent dropdown_Picker hide">
+    <div class="col l6 m6 s6">
+      <a href="../CheckerPlus/index.html">
+        <i class="fa-duotone fa-badge-check fa-2xl"></i> <br />
+        Checker <i class="fa-solid fa-square-plus"></i>
+      </a>
+    </div>
+
+    <div class="col l6 m6 s6">
+      <a href="../MarketPlus/index.html">
+        <i class="fa-duotone fa-bag-shopping fa-2xl"></i><br />
+        Market <i class="fa-solid fa-square-plus"></i>
+      </a>
+    </div>
+
+    <div class="col l6 m6 s6 no-margin">
+      <a href="../BreedingPlus/index.html">
+        <i class="fa-duotone fa-egg-fried fa-2xl"></i><br />
+        Breeding <i class="fa-solid fa-square-plus"></i>
+      </a>
+    </div>
+
+    <div class="col l6 m6 s6 no-margin">
+      <a href="#">
+        <i class="fa-duotone fa-card-diamond fa-2xl"></i><br />
+        Explorer <i class="fa-solid fa-square-plus"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="changeLogsContent dropdown_Picker hide">
+    <p class="small-text">
+      <b>01/20/22.</b> Released v0.0.1. This includes searching dragons, completed with all dragon parts.
+    </p>
+  </div>
+
+  <div class="noticeContent dropdown_Picker hide">
+    <p><b><i class="fa fa-gear fa-spin"></i> This site is a work in progress!</b></p>
+    <p class="small-text">
+      TO DO: <br>
+      1. Add Filters by parts and race <br />
+      2. Add option for Skill Upgrades <br />
+      3. Probably add filter by damage? shield? energy cost? 🤷‍♂️
+    </p>
+    <p class="small-text">Want to help the project? Join my discord <b><i><a href="https://discord.gg/MkKbAYFg9F">here</a></i></b></p>
+
+    <input type="text" value="0x157b0984a6F34d04b6e345a4a898519B59D49e9c" id="wallet" class="hide">
+    <p class="small-text">
+      <i>If you are enjoying this project, you can consider donating through my wallet address. </i><br />
+      <button onclick="copyWallet(); M.toast({html: 'Thank you for sharing your interest to the project!'})">0x157b0984a6F34d04b6e345a4a898519B59D49e9c <i class="fa-solid fa-copy"></i></button>
+    </p>
+
+    <div class="creator right">
+      <div>GibiDroidZ#3281</div>
+      <a class="btn-floating pulse pink darken-4"><img class="" src="https://cdn.discordapp.com/avatars/366452806246465537/465a93828fe0c618317c03bbe774512f.webp?size=100" alt=""></a>
+    </div>
+  </div>
+
+  <main>
+    <div class="main_content row">
+      <h1>Explorer <i class="fa-solid fa-square-plus"></i></h1>
+
+      <div class="filterList">
+        <div class="filter">
+          <!--div class="input-field name">
+            <input placeholder="What's your dragon number?" id="first_name" type="text" class="validate dragonNo">
+            <label for="first_name">Dragon Number</label>
+          </div-->
+
+          <div class="small_text right grey-text text-darken-3" style="width: 100%">
+            <p>Filter feature is not yet available</p>
+          </div>
+
+          <div class="input-field parts right">
+            <select>
+              <option value="3">Horn</option>
+              <option value="4">Ear</option>
+              <option value="5">Wings</option>
+              <option value="6">Tail</option>
+            </select>
+            <label>Part</label>
+          </div>
+
+          <div class="input-field skillUpgrade right">
+            <select>
+              <option value="0">Base</option>
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+            </select>
+            <label>Skill Upgrades</label>
+          </div>
+
+          <div class="input-field race right">
+            <select>
+              <option value="1">Water</option>
+              <option value="2">Fire</option>
+              <option value="3">Storm</option>
+              <option value="4">Rock</option>
+              <option value="5">Thunder</option>
+            </select>
+            <label>Race</label>
+          </div>
+
+          <div class="input-field race right">
+            <select>
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+            <label>Energy Cost</label>
+          </div>
+
+          <div class="input-field race right">
+            <select>
+              <optgroup label="Attack">
+                <option value="1">Highest Attack</option>
+                <option value="2">Lowest Attack</option>
+              </optgroup>
+              <optgroup label="Defense">
+                <option value="3">Highest Defense</option>
+                <option value="4">Lowest Defense</option>
+              </optgroup>
+            </select>
+            <label>Sort</label>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row" id="cardsList"></div>
+    </div>
+    </div>
+
+  </main>
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+
+  <script src="../general.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

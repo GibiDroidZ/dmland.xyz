@@ -21,7 +21,7 @@
   <link href="../general.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="../parts.css" rel="stylesheet">
-  <link href="skill.css" rel="stylesheet">
+  <link href="../skill.css" rel="stylesheet">
 </head>
 
 <body id="parallax">
@@ -68,10 +68,18 @@
         Breeding <i class="fa-solid fa-square-plus"></i>
       </a>
     </div>
+
+    <div class="col l6 m6 s6 no-margin">
+      <a href="../ExplorerPlus/index.html">
+        <i class="fa-duotone fa-card-diamond fa-2xl"></i><br />
+        Explorer <i class="fa-solid fa-square-plus"></i>
+      </a>
+    </div>
   </div>
 
   <div class="changeLogsContent dropdown_Picker hide">
     <p class="small-text">
+      <b>02/22/22.</b> Released v0.0.9. Added Skill images. <br />
       <b>02/15/22.</b> Released v0.0.8. Added Bloodline (Parents) and Upgrade Details. <br />
       <b>02/14/22.</b> Released v0.0.7. Updated Parts and Skill upgrades UI. <br />
       <b>02/12/22.</b> Released v0.0.6. Code refactor + Updated Header UI. <br />
@@ -88,8 +96,7 @@
     <p class="small-text">
       TO DO: <br>
       1. Responsiveness issue. <br />
-      2. Add skill image. <br />
-      3. Accessibility (for review) <br />
+      2. Accessibility (for review) <br />
     </p>
     <p class="small-text">Want to help the project? Join my discord <b><i><a href="https://discord.gg/MkKbAYFg9F">here</a></i></b></p>
 
@@ -145,12 +152,27 @@
               <i class="fas fa-bars right"></i>
             </div>
 
+
+            <p class="detail_section">Summary</p>
+            <br />
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Health"><i class="fas fa-heart"></i> <span class="dragon_health"></span></div>
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Attack"><i class="fas fa-sword"></i> <span class="dragon_attack"></span></div>
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Defense"><i class="fas fa-shield"></i> <span class="dragon_defense"></span></div>
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Speed"><i class="fas fa-boot"></i> <span class="dragon_speed"></span></div>
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Life Force"><i class="fas fa-fire"></i> <span class="dragon_lifeForce"></span></div>
             <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="CE"><i class="fas fa-dumbbell"></i> <span class="dragon_ce"></span></div>
+
+            <br /><br />
+            <p class="detail_section">Parts</p>
+            <br />
+            <div class="row">
+              <div class="col l6 valign-wrapper"><span class="parts-eye"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Eye">Eye</i> <span class="dragon_parts-eye"></span></div>
+              <div class="col l6 valign-wrapper"><span class="parts-totem"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Totem">Totem</i> <span class="dragon_parts-totem"></span></div>
+              <div class="col l6 valign-wrapper"><span class="parts-horn"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Horn">Horn</i> <span class="dragon_parts-horn"></span></div>
+              <div class="col l6 valign-wrapper"><span class="parts-ear"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Ear">Ear</i> <span class="dragon_parts-ear"></span></div>
+              <div class="col l6 valign-wrapper"><span class="parts-wing"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Wing">Wings</i> <span class="dragon_parts-wing"></span></div>
+              <div class="col l6 valign-wrapper"><span class="parts-tail"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Tail">Tail</i> <span class="dragon_parts-tail"></span></div>
+            </div>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">
@@ -256,13 +278,12 @@
           <div class="col l6 m6 s12">
             <div class="card dragon_card">
               <div class="card-image">
-                <img class="dragon_skill1-image" src="">
-                <p></p>
+                <img class="dragon_skill1-image" src="" />
                 <button class="btn-floating waves-effect waves-light yellow skill_stats skill_stats-energy">
                   <p class="dragon_skill1-energy"></p>
                 </button>
                 <button class="btn-floating waves-effect waves-light red skill_stats skill_stats-damage">
-                  <p class="dragon_skill1-damage">
+                  <p class="dragon_skill1-damage"></p>
                 </button>
                 <button class="btn-floating waves-effect waves-light red skill_stats skill_stats-damage-bg"></button>
                 <button class="btn-floating waves-effect waves-light blue skill_stats skill_stats-shield">
@@ -287,12 +308,11 @@
             <div class="card dragon_card">
               <div class="card-image">
                 <img class="dragon_skill2-image" src="">
-                <p></p>
                 <button class="btn-floating waves-effect waves-light yellow skill_stats skill_stats-energy">
                   <p class="dragon_skill2-energy"></p>
                 </button>
                 <button class="btn-floating waves-effect waves-light red skill_stats skill_stats-damage">
-                  <p class="dragon_skill2-damage">
+                  <p class="dragon_skill2-damage"></p>
                 </button>
                 <button class="btn-floating waves-effect waves-light red skill_stats skill_stats-damage-bg"></button>
                 <button class="btn-floating waves-effect waves-light blue skill_stats skill_stats-shield">
@@ -317,13 +337,11 @@
             <div class="card dragon_card">
               <div class="card-image">
                 <img class="dragon_skill3-image" src="">
-
-                <p></p>
                 <button class="btn-floating waves-effect waves-light yellow skill_stats skill_stats-energy">
                   <p class="dragon_skill3-energy"></p>
                 </button>
                 <button class="btn-floating waves-effect waves-light red skill_stats skill_stats-damage">
-                  <p class="dragon_skill3-damage">
+                  <p class="dragon_skill3-damage"></p>
                 </button>
                 <button class="btn-floating waves-effect waves-light red skill_stats skill_stats-damage-bg"></button>
                 <button class="btn-floating waves-effect waves-light blue skill_stats skill_stats-shield">
@@ -348,12 +366,11 @@
             <div class="card dragon_card">
               <div class="card-image">
                 <img class="dragon_skill4-image" src="">
-                <p></p>
                 <button class="btn-floating waves-effect waves-light yellow skill_stats skill_stats-energy">
                   <p class="dragon_skill4-energy"></p>
                 </button>
                 <button class="btn-floating waves-effect waves-light red skill_stats skill_stats-damage">
-                  <p class="dragon_skill4-damage">
+                  <p class="dragon_skill4-damage"></p>
                 </button>
                 <button class="btn-floating waves-effect waves-light red skill_stats skill_stats-damage-bg"></button>
                 <button class="btn-floating waves-effect waves-light blue skill_stats skill_stats-shield">

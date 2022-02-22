@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (dna != '') {
       var dnaList = dna.split(',');
       var dnaSingleList = [];
-      var partsFromURL = document.getElementById('selectedPartsList');;
+      var partsFromURL = document.getElementById('selectedPartsList');
 
       for (var g = 0; g < dnaList.length - 1; g++) {
         dnaSingleList = getDNA(dnaList[g])[0];
