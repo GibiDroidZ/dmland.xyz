@@ -13,6 +13,10 @@ $('.notice').click(function() {
   $(this).toggleClass('active');
 })
 
+$('.simpleMode').click(function() {
+  $(this).toggleClass('active');
+})
+
 var price_DMS;
 var price_DMP;
 

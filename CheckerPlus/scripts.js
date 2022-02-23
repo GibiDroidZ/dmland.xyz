@@ -1,5 +1,31 @@
 var dragonNo;
 var dragonId;
+var simpleModeToggle;
+
+$(".simpleMode").click(function() {
+  if (simpleModeToggle == undefined || simpleModeToggle == 'Off') {
+    $('.dragonInfoSection').addClass('simple');
+    $('.dragonSummarySection').addClass('simple');
+    $('.dragonPartSection').addClass('simple');
+    $('.dragonPartExpose').addClass('simple');
+    $('.card-image').addClass('simple');
+    $('.contentSpacer').addClass('simple');
+
+    simpleModeToggle = 'On';
+  }
+
+  else {
+
+      $('.dragonInfoSection').removeClass('simple');
+      $('.dragonSummarySection').removeClass('simple');
+      $('.dragonPartSection').removeClass('simple');
+      $('.dragonPartExpose').removeClass('simple');
+      $('.card-image').removeClass('simple');
+      $('.contentSpacer').removeClass('simple');
+
+      simpleModeToggle = 'Off';
+  }
+});
 
 // Process input
 $(".getInput").click(function() {

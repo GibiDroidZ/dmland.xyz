@@ -510,3 +510,33 @@ a {
 .dragon_bloodLineToggle {
   margin-top: 20px;
 }
+
+.card-image.simple {
+  min-height: initial;
+}
+
+.card-image.simple .skill_stats-shield,
+.card-image.simple .skill_stats-damage {
+  top: 120px;
+}
+
+.card-image.simple .skill_stats-shield-bg,
+.card-image.simple .skill_stats-damage-bg {
+  top: 140px;
+}
+
+.dragonInfoSection.simple,
+.dragonSummarySection.simple,
+.dragonPartSection.simple,
+.dragonPartExpose.simple,
+.contentSpacer.simple,
+.card-image.simple .dragon_skill1-image,
+.card-image.simple .dragon_skill2-image,
+.card-image.simple .dragon_skill3-image,
+.card-image.simple .dragon_skill4-image {
+  display: none;
+}
+
+.contentSpacer {
+  padding: 10px;
+}

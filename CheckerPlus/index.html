@@ -36,6 +36,7 @@
       </ul>
 
       <ul class="right">
+        <li class="simpleMode"><i class="fa-regular fa-eye"></i></li>
         <li class="changeLogs"><i class="fa-solid fa-memo"></i></li>
         <li class="notice"><i class="fa-solid fa-triangle-exclamation"></i></li>
       </ul>
@@ -79,6 +80,7 @@
 
   <div class="changeLogsContent dropdown_Picker hide">
     <p class="small-text">
+      <b>02/23/22.</b> Released v0.1.0. Introduced simple mode which hides some dragon and skill information. <br />
       <b>02/22/22.</b> Released v0.0.9. Added Skill images. <br />
       <b>02/15/22.</b> Released v0.0.8. Added Bloodline (Parents) and Upgrade Details. <br />
       <b>02/14/22.</b> Released v0.0.7. Updated Parts and Skill upgrades UI. <br />
@@ -131,7 +133,7 @@
 
       <div class="dragon_showCase col l6 m6 s12">
 
-        <p class="detail_section">Dragon Information</p>
+        <p class="detail_section dragonInfoSection">Dragon Information</p>
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <div class="dragon_body dragonIndividual">
@@ -154,8 +156,7 @@
               <i class="fas fa-bars right"></i>
             </div>
 
-
-            <p class="detail_section">Summary</p>
+            <p class="detail_section dragonSummarySection">Summary</p>
             <br />
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Health"><i class="fas fa-heart"></i> <span class="dragon_health"></span></div>
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Attack"><i class="fas fa-sword"></i> <span class="dragon_attack"></span></div>
@@ -164,10 +165,10 @@
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Life Force"><i class="fas fa-fire"></i> <span class="dragon_lifeForce"></span></div>
             <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="CE"><i class="fas fa-dumbbell"></i> <span class="dragon_ce"></span></div>
 
-            <br /><br />
-            <p class="detail_section">Parts</p>
+            <p class="contentSpacer"></p>
+            <p class="detail_section dragonPartSection">Parts</p>
             <br />
-            <div class="row">
+            <div class="row dragonPartExpose">
               <div class="col l6 valign-wrapper"><span class="parts-eye"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Eye">Eye</i> <span class="dragon_parts-eye"></span></div>
               <div class="col l6 valign-wrapper"><span class="parts-totem"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Totem">Totem</i> <span class="dragon_parts-totem"></span></div>
               <div class="col l6 valign-wrapper"><span class="parts-horn"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Horn">Horn</i> <span class="dragon_parts-horn"></span></div>
