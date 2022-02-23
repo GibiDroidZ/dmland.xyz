@@ -25,15 +25,6 @@ a {
   z-index: -1;
 }
 
-.no-mobile {
-  display: none;
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  z-index: 2;
-  background-color: white;
-}
-
 .side_bar {
   position: fixed;
   width: 200px;
@@ -46,7 +37,7 @@ a {
 
 .main_content {
   padding: 20px;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -231,12 +222,12 @@ a {
 }
 
 .skill_stats-damage {
-  top: 160px;
+  top: 120px;
   border-radius: 0 20px !important;
 }
 
 .skill_stats-damage-bg {
-  top: 180px;
+  top: 140px;
   height: 20px;
   left: -10px;
   width: 50px;
@@ -246,12 +237,12 @@ a {
 
 .skill_stats-shield {
   right: 0;
-  top: 160px;
+  top: 120px;
   border-radius: 20px 0 !important;
 }
 
 .skill_stats-shield-bg {
-  top: 180px;
+  top: 140px;
   height: 20px;
   right: -10px;
   width: 50px;
@@ -539,4 +530,11 @@ a {
 
 .contentSpacer {
   padding: 10px;
+}
+
+.card-content .dragon_skill1-description,
+.card-content .dragon_skill2-description,
+.card-content .dragon_skill3-description,
+.card-content .dragon_skill4-description {
+  font-size: 12px;
 }
