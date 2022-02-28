@@ -13,6 +13,32 @@ $('.notice').click(function() {
   $(this).toggleClass('active');
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var carousel_items = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(carousel_items, {
+      fullWidth: true
+    });
+  });
+
+carouselLinks = [
+  {
+    'img_url': 'https://media.discordapp.net/attachments/947897397802070098/947897865068482580/030422._Skills_Update_c.png',
+    'link': ''
+  },
+  {
+    'img_url': 'https://media.discordapp.net/attachments/947897397802070098/947903629732499466/022322._DMS_Consumption_c.png',
+    'link': 'https://docs.google.com/forms/d/e/1FAIpQLSeUG2ogh6guIGG5DeP-huGqXgHJil9c2l4iNlX7RWj8X12Rng/viewform'
+  },
+  {
+    'img_url': 'https://media.discordapp.net/attachments/947897397802070098/947905137047908352/021822._DAO_Voting.png',
+    'link': ''
+  }
+];
+
+for (var d=0; d<carouselLinks.length; d++) {
+  $('.carousel').append('<a class="carousel-item" target="_blank" href="' + carouselLinks[d].link + '"><img src="' + carouselLinks[d].img_url + '" /></a>');
+}
+
 $.ajax({
   type: "GET",
   url: 'https://deep-index.moralis.io/api/v2/erc20/0x9a26e6d24df036b0b015016d1b55011c19e76c87/price?chain=bsc',

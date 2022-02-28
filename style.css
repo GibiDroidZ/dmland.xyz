@@ -171,3 +171,25 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.newSection {
+  width: 300px;
+}
+
+.newSection .carousel .carousel-item {
+  width: 100%;
+}
+
+.newSection .carousel {
+  border-radius: 5px;
+  box-shadow: 0 10px 10px RGBA(0, 0, 0, .3);
+  height: 140px;
+}
+
+.newSection p {
+  margin-bottom: 5px;
+  text-decoration: underline;
+  font-size: 12px;
+  margin-top: 40px;
+  font-weight: bold;
+}

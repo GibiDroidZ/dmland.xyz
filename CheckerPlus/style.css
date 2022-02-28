@@ -221,6 +221,46 @@ a {
   top: -10px;
 }
 
+.skill_stats-part {
+  right: 0px !important;
+  top: 0px !important;
+  border-radius: 0 10px;
+  padding: 3px;
+  height: 24px;
+  width: 24px;
+  box-shadow: 0 0 0;
+}
+
+.skill_stats-part .part_horn {
+  width: 12px !important;
+  height: 14px;
+}
+
+.skill_stats-part .part_ear {
+  width: 15px !important;
+  height: 14px;
+  margin-left: -2px;
+}
+
+.skill_stats-part .part_wings {
+  width: 14px !important;
+  height: 14px;
+  margin-top: -1px;
+}
+
+.skill_stats-part .part_tail {
+  width: 14px !important;
+  height: 16px;
+  margin-top: -3px;
+  margin-left: -1px;
+}
+
+.skill_stats-part {
+  right: -10px;
+  top: -10px;
+  border-radius: 3px;
+}
+
 .skill_stats-damage {
   top: 120px;
   border-radius: 0 20px !important;
@@ -346,7 +386,7 @@ a {
 .dragon_skill3-typeFire,
 .dragon_skill4-typeFire {
   background-image: url('../assets/type_Fire.png');
-  background-size: 16px;
+  background-size: 15px;
 }
 
 .dragon_skill1-typeWater,
