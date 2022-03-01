@@ -242,7 +242,7 @@
 }
 
 #products {
-  height: calc(100vh - 210px);
+  height: calc(100vh - 230px);
   overflow: auto;
 }
 
@@ -461,17 +461,45 @@
 }
 
 .filter_sort .selectSortType,
-.filter_sort .selectMaxDisplay,
-.filter_sort .pages {
+.filter_sort .selectMaxDisplay {
   width: 150px;
   display: inline-block;
   font-size: 16px;
 }
 
-/*.filter_sort .pages {
-  width: calc(100% - 510px);
+.pages {
   text-align: center;
-}*/
+}
+
+#pageListWrap {
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pagination li.glass {
+  margin: 0 2px;
+  border-radius: 5px;
+}
+
+.pagination li.glass a {
+  margin: 0 2px;
+  font-weight: bold;
+  color: white;
+}
+
+.pagination li.glass.active {
+  background-color: RGBA(121, 85, 72, .9);
+  border-color: RGBA(121, 85, 72, .18);
+}
+
+.glass {
+  background-color: RGBA(255, 255, 255, .5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 .filter_sort .input-field>label {
   color: white;
 }

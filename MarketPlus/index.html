@@ -80,6 +80,7 @@
 
   <div class="changeLogsContent dropdown_Picker hide">
     <p class="small-text">
+      <b>03/01/22.</b> Released v0.0.7. Support for multiple page displays. <br />
       <b>02/14/22.</b> Released v0.0.6. Added Parts search (highly experimental). <br />
       <b>02/12/22.</b> Released v0.0.5. Updated Header UI + Sidebar checkBoxes and added Dark Mode. <br />
       <b>02/06/22.</b> Released v0.0.4. Updated some UI components + fixed slider bug on page load.<br />
@@ -93,8 +94,7 @@
     <p><b><i class="fa fa-gear fa-spin"></i> This site is a work in progress!</b></p>
     <p class="small-text">
       TO DO: <br>
-      1. Allow multiple pages to be displayed<br>
-      2. Responsiveness issue <br />
+      1. Responsiveness issue <br />
     </p>
     <p class="small-text">Want to help the project? Join my discord <b><i><a href="https://discord.gg/MkKbAYFg9F">here</a></i></b></p>
 
@@ -111,7 +111,7 @@
   </div>
 
   <main>
-    <div class="side_bar">
+    <div class="side_bar glass">
       <h1 class="sidebar_Title">Market <i class="fa-solid fa-square-plus marketPlusIcon"></i></h1>
       <div class="filters">
         <div class="filterButtons">
@@ -244,17 +244,6 @@
     <div class="main_content">
       <div class="filter_sort">
         <p class="totalDragons"></p>
-        <span class="showingMaxDragons"><i></i></span>
-
-        <div class="pages">
-          <ul class="pagination">
-            <!--
-            <li class="disabled"><a href="#!"><i class="fa fa-chevron-left"></i></a></li>
-            <div class="pageListWrap"></div>
-            <li class="waves-effect"><a href="#!"><i class="fa fa-chevron-right"></i></a></li>
-          -->
-          </ul>
-        </div>
 
         <div class="input-field selectSortType right">
           <select>
@@ -278,6 +267,15 @@
       </div>
 
       <div id="products" class="row"></div>
+      <div class="pages">
+        <ul class="pagination">
+          <!--li class="waves-effect glass"><a href="#!"><i class="fa fa-chevron-left"></i></a></li-->
+          <li>
+            <div id="pageListWrap" class="tooltipped" data-position="top" data-tooltip="DRAG LEFT AND RIGHT TO SEE OTHER PAGES."></div>
+          </li>
+          <!--li class="waves-effect glass"><a href="#!"><i class="fa fa-chevron-right"></i></a></li-->
+        </ul>
+      </div>
     </div>
   </main>
 
