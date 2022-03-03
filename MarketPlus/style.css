@@ -593,3 +593,93 @@
 .removeSelected {
   cursor: pointer;
 }
+
+/*
+.showFilter,
+.mobileNav {
+  display: none;
+}*/
+/* MOBILE STYLES */
+/*
+@media only screen and (max-width: 1450px) {
+  .side_bar {
+    display: none;
+  }
+
+  .main_content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .showFilter {
+    display: inline-block;
+  }
+
+  .showFilter {
+    margin-top: -10px;
+  }
+
+  .mobileNav {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    margin-top: 40px;
+    display: block;
+  }
+
+  .mobileNav .filter_tabs {
+    width: 55px;
+    display: inline-block;
+    padding-right: 5px;
+    border-right: 1px solid RGB(80, 80, 80)
+  }
+
+  .mobileNav .filter_tabs li {
+    display: block;
+    width: initial;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+  }
+
+  .mobileNav .filter_tabs li.selected {
+    border: initial initial;
+    background-color: RGB(80, 80, 80);
+    color: white;
+  }
+
+  .mobileNav .categ_race,
+  .mobileNav .categ_stage,
+  .mobileNav .categ_breedCount,
+  .mobileNav .categ_CE,
+  .mobileNav .statCateg_attack,
+  .mobileNav .statCateg_health,
+  .mobileNav .statCateg_defense,
+  .mobileNav .statCateg_speed,
+  .mobileNav .statCateg_lifeForce {
+    min-width: 175px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    border-right: 1px solid RGB(80, 80, 80);
+    height: 175px;
+    width: 100%;
+    max-width: calc((100% / 5) - 5px);
+  }
+
+  .mobileNav .filterCategContainer {
+    padding: 10px 5px;
+    width: calc(100% - 60px);
+    display: inline-block;
+    vertical-align: top;
+    max-width: 900px;
+  }
+
+  .mobileNav .filterCategories {
+    height: initial;
+  }
+
+  .mobileNav .filterCategContainer div:last-child {
+    border: 0;
+  }
+}*/

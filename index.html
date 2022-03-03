@@ -1,384 +1,389 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="One stop shop for your dragon mainland needs!">
-  <meta name="keywords"
-    content="dragon mainland, dragon, dragons, storm, fire, water, thunder, rock, upgrade, skull upgrade, skull synthesis, dragon devour, devour, dmland, nft, gibidroidz, p2e, play2earn, mainland, dragon mainland shards, dms, dragon mainland potion, dms, DAO, play to earn, dragonmainland, axie, axie infinity, next axie infinity, axie infinity killer, crypto">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="One stop shop for your dragon mainland needs!">
+    <meta name="keywords"
+      content="dragon mainland, dragon, dragons, storm, fire, water, thunder, rock, upgrade, skull upgrade, skull synthesis, dragon devour, devour, dmland, nft, gibidroidz, p2e, play2earn, mainland, dragon mainland shards, dms, dragon mainland potion, dms, DAO, play to earn, dragonmainland, axie, axie infinity, next axie infinity, axie infinity killer, crypto">
 
-  <title>DM Land</title>
+    <title>DM Land</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYG7YL1E4Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous"
-    referrerpolicy="no-referrer" /-->
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-XYG7YL1E4Z');
+    </script>
 
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/DM-logo.png">
+    <link rel="icon" href="assets/DM-logo.png">
+    <link href="general.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="parts.css" rel="stylesheet">
+  </head>
 
-  <link href="general.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link href="parts.css" rel="stylesheet">
-</head>
+  <body id="parallax">
+    <div class="bg_overlay"></div>
 
-<body id="parallax">
-  <div class="bg_overlay"></div>
+    <nav class="navBar grey darken-4">
+      <div class="">
+        <a href="#" class="site_Logo left"><img src="assets/DM-logo.png" alt="DM logo" /></a>
 
-  <nav class="navBar grey darken-4">
-    <div class="">
-      <a href="#" class="site_Logo left"><img src="assets/DM-logo.png" alt="DM logo" /></a>
+        <ul class="left">
+          <li class="app_Picker"><i class="fa-duotone fa-grid"></i></li>
+        </ul>
 
-      <ul class="left">
-        <li class="app_Picker"><i class="fa-duotone fa-grid"></i></li>
-      </ul>
+        <ul class="right">
+          <li class="notice"><i class="fa-solid fa-triangle-exclamation"></i></li>
+        </ul>
 
-      <ul class="right">
-        <li class="notice"><i class="fa-solid fa-triangle-exclamation"></i></li>
-      </ul>
-
-      <div class="tokenPrices right">
-        <div class="DMS_Price"></div>
-        <div class="DMP_Price"></div>
-      </div>
-    </div>
-  </nav>
-
-  <div class="row app_PickerContent dropdown_Picker hide">
-    <div class="col l6 m6 s6">
-      <a href="./CheckerPlus/index.html">
-        <i class="fa-duotone fa-badge-check fa-2xl"></i> <br />
-        Checker <i class="fa-solid fa-square-plus"></i>
-      </a>
-    </div>
-
-    <div class="col l6 m6 s6">
-      <a href="./MarketPlus/index.html">
-        <i class="fa-duotone fa-bag-shopping fa-2xl"></i><br />
-        Market <i class="fa-solid fa-square-plus"></i>
-      </a>
-    </div>
-
-    <div class="col l6 m6 s6 no-margin">
-      <a href="./BreedingPlus/index.html">
-        <i class="fa-duotone fa-egg-fried fa-2xl"></i><br />
-        Breeding <i class="fa-solid fa-square-plus"></i>
-      </a>
-    </div>
-
-    <div class="col l6 m6 s6 no-margin">
-      <a href="./ExplorerPlus/index.html">
-        <i class="fa-duotone fa-card-diamond fa-2xl"></i><br />
-        Explorer <i class="fa-solid fa-square-plus"></i>
-      </a>
-    </div>
-  </div>
-
-  <div class="noticeContent dropdown_Picker hide">
-    <input type="text" value="0x157b0984a6F34d04b6e345a4a898519B59D49e9c" id="wallet" class="hide">
-    <p class="small-text">
-      <i>If you are enjoying this project, you can consider donating through my wallet address. </i><br />
-      <button onclick="copyWallet(); M.toast({html: 'Thank you for sharing your interest to the project!'})">0x157b0984a6F34d04b6e345a4a898519B59D49e9c <i class="fa-solid fa-copy"></i></button>
-    </p>
-
-    <div class="creator right">
-      <div>GibiDroidZ#3281</div>
-      <a class="btn-floating pulse pink darken-4"><img class="" src="https://cdn.discordapp.com/avatars/366452806246465537/465a93828fe0c618317c03bbe774512f.webp?size=100" alt=""></a>
-    </div>
-  </div>
-
-  <div class="content1">
-    <div class="container valign-wrapper">
-      <div class="row">
-        <div class="col l8 m8 s12">
-          <h1>DM Land!</h1>
-          <h4>Help yourself using a bunch of tools to make your dragons stronger!</h4>
-
-          <div class="newSection">
-            <p>WHAT'S NEW</p>
-            <div class="carousel"></div>
-          </div>
-        </div>
-
-        <div class="col l4 m4 s12 row">
-          <div class="col l6 m6 s6">
-            <a href="#CheckerPlus" class="black-text">
-              <div class="appIcon glass">
-                <h4><i class="fa-duotone fa-badge-check fa-2xl"></i></h4>
-                <br />
-                <b>CHECKER <i class="fa-solid fa-square-plus"></i></b>
-              </div>
-            </a>
-          </div>
-
-          <div class="col l6 m6 s6">
-            <a href="#MarketPlus" class="black-text">
-              <div class="appIcon glass">
-                <h4><i class="fa-duotone fa-bag-shopping fa-2xl"></i></h4>
-                <br />
-                <b>MARKET <i class="fa-solid fa-square-plus"></i></b>
-              </div>
-            </a>
-          </div>
-
-          <div class="col l6 m6 s6">
-            <a href="#BreedingPlus" class="black-text">
-              <div class="appIcon glass">
-                <h4><i class="fa-duotone fa-egg-fried fa-2xl"></i></h4>
-                <br />
-                <b>BREEDING <i class="fa-solid fa-square-plus"></i></b>
-              </div>
-            </a>
-          </div>
-
-          <div class="col l6 m6 s6">
-            <a href="#BuilderPlus" class="black-text">
-              <div class="appIcon glass">
-                <h4><i class="fa-duotone fa-puzzle fa-2xl"></i></h4>
-                <br />
-                <b>BUILDER <i class="fa-solid fa-square-plus"></i></b>
-              </div>
-            </a>
-          </div>
-
-          <div class="col l6 m6 s6">
-            <a href="#ExplorerPlus" class="black-text">
-              <div class="appIcon glass">
-                <h4><i class="fa-duotone fa-card-diamond fa-2xl"></i></h4>
-                <br />
-                <b>EXPLORER <i class="fa-solid fa-square-plus"></i></b>
-              </div>
-            </a>
-          </div>
-
-          <div class="col l6 m6 s6">
-            <a href="#More" class="black-text">
-              <div class="appIcon glass">
-                <h4><i class="fa-duotone fa-arrow-right fa-2xl"></i></h4>
-                <br />
-                Explore more
-              </div>
-            </a>
-          </div>
+        <div class="tokenPrices right">
+          <div class="DMS_Price"></div>
+          <div class="DMP_Price"></div>
         </div>
       </div>
-    </div>
-  </div>
+    </nav>
 
-  <div class="content2" id="CheckerPlus">
-    <div class="container valign-wrapper ">
-      <div class="row">
-        <div class="featureTitle col l5 m12 s12">
-          <a href="./CheckerPlus/index.html">
-            <i class="fa-duotone fa-badge-check fa-2xl featureIcon"></i>
-            Checker <i class="fa-solid fa-square-plus"></i>
-          </a>
-        </div>
-
-        <div class="col l7 m12 s12 right-align">
-          <h4>Check the details of your dragon, even if it's still an egg!</h4>
-        </div>
+    <div class="row app_PickerContent dropdown_Picker hide">
+      <div class="col l6 m6 s6">
+        <a href="./CheckerPlus/index.html">
+          <i class="fa-duotone fa-badge-check fa-2xl"></i> <br />
+          Checker <i class="fa-solid fa-square-plus"></i>
+        </a>
       </div>
 
+      <div class="col l6 m6 s6">
+        <a href="./MarketPlus/index.html">
+          <i class="fa-duotone fa-bag-shopping fa-2xl"></i><br />
+          Market <i class="fa-solid fa-square-plus"></i>
+        </a>
+      </div>
+
+      <div class="col l6 m6 s6 no-margin">
+        <a href="./BreedingPlus/index.html">
+          <i class="fa-duotone fa-egg-fried fa-2xl"></i><br />
+          Breeding <i class="fa-solid fa-square-plus"></i>
+        </a>
+      </div>
+
+      <div class="col l6 m6 s6 no-margin">
+        <a href="./ExplorerPlus/index.html">
+          <i class="fa-duotone fa-card-diamond fa-2xl"></i><br />
+          Explorer <i class="fa-solid fa-square-plus"></i>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="content3" id="MarketPlus">
-    <div class="container valign-wrapper">
-      <div class="row">
-        <div class="col l7 m12 s12">
-          <h4>Shop your dragons easier with a better Marketplace!</h4>
-        </div>
+    <div class="noticeContent dropdown_Picker hide">
+      <input type="text" value="0x157b0984a6F34d04b6e345a4a898519B59D49e9c" id="wallet" class="hide">
+      <p class="small-text">
+        <i>If you are enjoying this project, you can consider donating through my wallet address. </i><br />
+        <button onclick="copyWallet(); M.toast({html: 'Thank you for sharing your interest to the project!'})">0x157b0984a6F34d04b6e345a4a898519B59D49e9c <i class="fa-solid fa-copy"></i></button>
+      </p>
 
-        <div class="col l5 m12 s12">
-          <div class="featureTitle right-align">
-            <a href="./MarketPlus/index.html">
-              <i class="fa-duotone fa-bag-shopping fa-2xl featureIcon"></i></i>
-              Market <i class="fa-solid fa-square-plus"></i>
-            </a>
+      <div class="creator right">
+        <div>GibiDroidZ#3281</div>
+        <a class="btn-floating pulse pink darken-4"><img class="" src="https://cdn.discordapp.com/avatars/366452806246465537/465a93828fe0c618317c03bbe774512f.webp?size=100" alt=""></a>
+      </div>
+    </div>
+
+    <div class="content1">
+      <div class="container valign-wrapper">
+        <div class="row">
+          <div class="col l8 m8 s12">
+            <h1>DM Land!</h1>
+            <h4>Help yourself using a bunch of tools to make your dragons stronger!</h4>
+
+            <div class="newSection">
+              <p>WHAT'S NEW</p>
+              <div class="carousel"></div>
+            </div>
           </div>
-        </div>
-      </div>
 
+          <div class="col l4 m4 s12 row">
+            <div class="col l6 m6 s6">
+              <a href="#CheckerPlus" class="black-text">
+                <div class="appIcon glass">
+                  <h4><i class="fa-duotone fa-badge-check fa-2xl"></i></h4>
+                  <br />
+                  <b>CHECKER <i class="fa-solid fa-square-plus"></i></b>
+                </div>
+              </a>
+            </div>
 
-    </div>
-  </div>
+            <div class="col l6 m6 s6">
+              <a href="#MarketPlus" class="black-text">
+                <div class="appIcon glass">
+                  <h4><i class="fa-duotone fa-bag-shopping fa-2xl"></i></h4>
+                  <br />
+                  <b>MARKET <i class="fa-solid fa-square-plus"></i></b>
+                </div>
+              </a>
+            </div>
 
-  <div class="content4" id="BreedingPlus">
-    <div class="container valign-wrapper">
-      <div class="row">
-        <div class="col l5 m12 s12">
-          <div class="featureTitle">
-            <a href="./BreedingPlus/index.html">
-              <i class="fa-duotone fa-egg-fried fa-2xl"></i>
-              Breeding <i class="fa-solid fa-square-plus"></i>
-            </a>
-          </div>
-        </div>
+            <div class="col l6 m6 s6">
+              <a href="#BreedingPlus" class="black-text">
+                <div class="appIcon glass">
+                  <h4><i class="fa-duotone fa-egg-fried fa-2xl"></i></h4>
+                  <br />
+                  <b>BREEDING <i class="fa-solid fa-square-plus"></i></b>
+                </div>
+              </a>
+            </div>
 
-        <div class="col l7 m12 s12 right-align">
-          <h4>Take your breeding to the next level!</h4>
-        </div>
-      </div>
-    </div>
-  </div>
+            <div class="col l6 m6 s6">
+              <a href="#BuilderPlus" class="black-text">
+                <div class="appIcon glass">
+                  <h4><i class="fa-duotone fa-puzzle fa-2xl"></i></h4>
+                  <br />
+                  <b>BUILDER <i class="fa-solid fa-square-plus"></i></b>
+                </div>
+              </a>
+            </div>
 
-  <div class="content5" id="BuilderPlus">
-    <div class="container valign-wrapper">
-      <div class="row">
-        <div class="col l7 m12 s12">
-          <h4>Build your dream dragon!</h4>
-        </div>
+            <div class="col l6 m6 s6">
+              <a href="#ExplorerPlus" class="black-text">
+                <div class="appIcon glass">
+                  <h4><i class="fa-duotone fa-card-diamond fa-2xl"></i></h4>
+                  <br />
+                  <b>EXPLORER <i class="fa-solid fa-square-plus"></i></b>
+                </div>
+              </a>
+            </div>
 
-        <div class="col l5 m12 s12">
-          <div class="featureTitle right-align">
-            <a href="#">
-              <i class="fa-duotone fa-puzzle fa-2xl"></i>
-              Builder <i class="fa-solid fa-square-plus"></i>
-            </a>
+            <div class="col l6 m6 s6">
+              <a href="#More" class="black-text">
+                <div class="appIcon glass">
+                  <h4><i class="fa-duotone fa-arrow-right fa-2xl"></i></h4>
+                  <br />
+                  Explore more
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="content6" id="ExplorerPlus">
-    <div class="container valign-wrapper">
-      <div class="row">
-        <div class="col l5 m12 s12">
-          <div class="featureTitle">
-            <a href="./ExplorerPlus/index.html">
-              <i class="fa-duotone fa-card-diamond fa-2xl"></i>
-              Explorer <i class="fa-solid fa-square-plus"></i>
+    <div class="content2" id="CheckerPlus">
+      <div class="container valign-wrapper ">
+        <div class="row">
+          <div class="featureTitle col l5 m12 s12">
+            <a href="./CheckerPlus/index.html">
+              <i class="fa-duotone fa-badge-check fa-2xl featureIcon"></i>
+              Checker <i class="fa-solid fa-square-plus"></i>
             </a>
           </div>
-        </div>
 
-        <div class="col l7 m12 s12 right-align">
-          <h4>Explore the vast selection of cards!</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="contentLast" id="More">
-    <div class="container valign-wrapper">
-      <div class="row">
-        <h2>Changelogs</h2>
-        <div class="col l12 m12 s12">
-          <ul class="tabs glass">
-            <li class="tab col s3" data-tab="DMLandTabContent"><a class="black-text active" href="#DML"><i class="fa-duotone fa-dragon"></i></a></li>
-            <li class="tab col s3" data-tab="checkerTabContent"><a class="black-text" href="#Checker"><i class="fa-duotone fa-badge-check fa-2xl"></i></a></li>
-            <li class="tab col s3" data-tab="marketTabContent"><a class="black-text" href="#Market"><i class="fa-duotone fa-bag-shopping fa-2xl"></i></a></li>
-            <li class="tab col s3" data-tab="breedingTabContent"><a class="black-text" href="#Breeding"><i class="fa-duotone fa-egg-fried fa-2xl"></i></a></li>
-            <li class="tab col s3" data-tab="explorerTabContent"><a class="black-text" href="#Explorer"><i class="fa-duotone fa-card-diamond fa-2xl"></i></a></li>
-          </ul>
-        </div>
-
-        <div class="tab-panel DMLandTabContent glass">
-          <h5>DM Land</h5>
-          <ul>
-            <li><b>02/28/22.</b> Released v0.0.7. Added What's New section </li>
-            <li><b>02/21/22.</b> Released v0.0.6. Added DMP & DMS price. Also added section for Builder + and Explorer + </li>
-            <li><b>02/17/22.</b> Released v0.0.5. Major Landing Page revamp! Pretty right? </li>
-            <li><b>02/15/22.</b> Released v0.0.4. Slight UI revamp. Noticed the difference? We're now using Glass Morphism! :) </li>
-            <li><b>02/14/22.</b> Released v0.0.3. Rebranded to DM Land (with a formal URL: DMLand.xyz) so it's easy to remember (easy as XYZ) ;) </li>
-            <li><b>02/05/22.</b> Released v0.0.2. Major code refactor and structure changes so Market <i class="fa-solid fa-square-plus"></i> and Checker <i class="fa-solid fa-square-plus"></i> share a single source of assets.</li>
-            <li><b>01/25/22.</b> Released v0.0.1. Launch DM Land landing page for quick access to various tools.</li>
-          </ul>
-        </div>
-
-        <div class="tab-panel hide checkerTabContent glass">
-          <h5>Checker <i class="fa-solid fa-square-plus"></i></h5>
-          <ul>
-            <li><b>02/28/22.</b> Released v0.1.1. Added parts indicator in the cards. </li>
-            <li><b>02/23/22.</b> Released v0.1.0. Introduced simple mode which hides some dragon and skill information. </li>
-            <li><b>02/22/22.</b> Released v0.0.9. Added Skill images. </li>
-            <li><b>02/15/22.</b> Released v0.0.8. Added Bloodline (Parents) and Upgrade Details. </li>
-            <li><b>02/14/22.</b> Released v0.0.7. Updated Parts and Skill upgrades UI. </li>
-            <li><b>02/12/22.</b> Released v0.0.6. Code refactor + Updated Header UI</li>
-            <li><b>02/06/22.</b> Released v0.0.5. Updated parts to display mutation tags.</li>
-            <li><b>02/04/22.</b> Released v0.0.4. Optimize code to display Dragon No. in URL.</li>
-            <li><b>02/03/22.</b> Released v0.0.3. Updated some UI components.</li>
-            <li><b>01/23/22.</b> Released v0.0.2. This includes fixes on missing dragon parts. </li>
-            <li><b>01/20/22.</b> Released v0.0.1. This includes searching dragons, completed with all dragon parts.</li>
-          </ul>
-        </div>
-
-        <div class="tab-panel hide marketTabContent glass">
-          <h5>Market <i class="fa-solid fa-square-plus"></i></h5>
-          <ul>
-            <li><b>03/01/22.</b> Released v0.0.7. Support for multiple page displays. <br /></li>
-            <li><b>02/14/22.</b> Released v0.0.6. Added Parts search (highly experimental) <br /></li>
-            <li><b>02/12/22.</b> Released v0.0.5. Updated Header UI + Sidebar checkBoxes and added Dark Mode.</li>
-            <li><b>02/06/22.</b> Released v0.0.4. Updated some UI components + fixed slider bug on page load.</li>
-            <li><b>02/05/22.</b> Released v0.0.3. Added Stat, Max Display filters and reworked Sort.</li>
-            <li><b>02/04/22.</b> Released v0.0.2. Fixed various bugs and integrated to Checker +.</li>
-            <li><b>02/03/22.</b> Released v0.0.1. Release first initial version of Market +.</li>
-          </ul>
-        </div>
-
-        <div class="tab-panel hide breedingTabContent glass">
-          <h5>Breeding <i class="fa-solid fa-square-plus"></i></h5>
-          <ul>
-            <li><b>02/21/22.</b> Released v0.0.1. Released with basic breeding information.</li>
-          </ul>
-        </div>
-
-        <div class="tab-panel hide explorerTabContent glass">
-          <h5>Explorer <i class="fa-solid fa-square-plus"></i></h5>
-          <ul>
-            <li><b>02/22/22.</b> Released v0.0.1. Released with basic cards information.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <button onclick="topFunction()" id="goToTop" class="glass" title="Go to top"><i class="fa-duotone fa-chevrons-up"></i></button>
-
-  <footer class="page-footer grey darken-4">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Made for Mainlanders,<br />With love ❤️</h5>
-
-          <div class="creator">
-            <a class="btn-floating pulse white"><img class="" src="https://cdn.discordapp.com/avatars/366452806246465537/465a93828fe0c618317c03bbe774512f.webp?size=100" alt=""></a>
-            <div>GibiDroidZ#3281</div>
+          <div class="col l7 m12 s12 right-align">
+            <h4>Check the details of your dragon, even if it's still an egg!</h4>
           </div>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Tools</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="./CheckerPlus/index.html">Checker <i class="fa-solid fa-square-plus"></i></a></li>
-            <li><a class="grey-text text-lighten-3" href="./MarketPlus/index.html">Market <i class="fa-solid fa-square-plus"></i></a></li>
-            <li><a class="grey-text text-lighten-3" href="./BreedingPlus/index.html">Breeding <i class="fa-solid fa-square-plus"></i></a></li>
-            <li><a class="grey-text text-lighten-3" href="./ExplorerPlus/index.html">Explorer <i class="fa-solid fa-square-plus"></i></a></li>
-          </ul>
+
+      </div>
+    </div>
+
+    <div class="content3" id="MarketPlus">
+      <div class="container valign-wrapper">
+        <div class="row">
+          <div class="col l7 m12 s12">
+            <h4>Shop your dragons easier with a better Marketplace!</h4>
+          </div>
+
+          <div class="col l5 m12 s12">
+            <div class="featureTitle right-align">
+              <a href="./MarketPlus/index.html">
+                <i class="fa-duotone fa-bag-shopping fa-2xl featureIcon"></i></i>
+                Market <i class="fa-solid fa-square-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="content4" id="BreedingPlus">
+      <div class="container valign-wrapper">
+        <div class="row">
+          <div class="col l5 m12 s12">
+            <div class="featureTitle">
+              <a href="./BreedingPlus/index.html">
+                <i class="fa-duotone fa-egg-fried fa-2xl"></i>
+                Breeding <i class="fa-solid fa-square-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col l7 m12 s12 right-align">
+            <h4>Take your breeding to the next level!</h4>
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer-copyright black">
+
+    <div class="content5" id="BuilderPlus">
+      <div class="container valign-wrapper">
+        <div class="row">
+          <div class="col l7 m12 s12">
+            <h4>Build your dream dragon!</h4>
+          </div>
+
+          <div class="col l5 m12 s12">
+            <div class="featureTitle right-align">
+              <a href="#">
+                <i class="fa-duotone fa-puzzle fa-2xl"></i>
+                Builder <i class="fa-solid fa-square-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content6" id="ExplorerPlus">
+      <div class="container valign-wrapper">
+        <div class="row">
+          <div class="col l5 m12 s12">
+            <div class="featureTitle">
+              <a href="./ExplorerPlus/index.html">
+                <i class="fa-duotone fa-card-diamond fa-2xl"></i>
+                Explorer <i class="fa-solid fa-square-plus"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col l7 m12 s12 right-align">
+            <h4>Explore the vast selection of cards!</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contentLast" id="More">
+      <div class="container valign-wrapper">
+        <div class="row">
+          <h2>Changelogs</h2>
+          <div class="col l12 m12 s12">
+            <ul class="tabs glass">
+              <li class="tab col s3" data-tab="DMLandTabContent"><a class="black-text active" href="#DML"><i class="fa-duotone fa-dragon"></i></a></li>
+              <li class="tab col s3" data-tab="checkerTabContent"><a class="black-text" href="#Checker"><i class="fa-duotone fa-badge-check fa-2xl"></i></a></li>
+              <li class="tab col s3" data-tab="marketTabContent"><a class="black-text" href="#Market"><i class="fa-duotone fa-bag-shopping fa-2xl"></i></a></li>
+              <li class="tab col s3" data-tab="breedingTabContent"><a class="black-text" href="#Breeding"><i class="fa-duotone fa-egg-fried fa-2xl"></i></a></li>
+              <li class="tab col s3" data-tab="explorerTabContent"><a class="black-text" href="#Explorer"><i class="fa-duotone fa-card-diamond fa-2xl"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="tab-panel DMLandTabContent glass">
+            <h5>DM Land</h5>
+            <ul>
+              <li><b>02/28/22.</b> Released v0.0.7. Added What's New section </li>
+              <li><b>02/21/22.</b> Released v0.0.6. Added DMP & DMS price. Also added section for Builder + and Explorer + </li>
+              <li><b>02/17/22.</b> Released v0.0.5. Major Landing Page revamp! Pretty right? </li>
+              <li><b>02/15/22.</b> Released v0.0.4. Slight UI revamp. Noticed the difference? We're now using Glass Morphism! :) </li>
+              <li><b>02/14/22.</b> Released v0.0.3. Rebranded to DM Land (with a formal URL: DMLand.xyz) so it's easy to remember (easy as XYZ) ;) </li>
+              <li><b>02/05/22.</b> Released v0.0.2. Major code refactor and structure changes so Market <i class="fa-solid fa-square-plus"></i> and Checker <i class="fa-solid fa-square-plus"></i> share a single source of assets.</li>
+              <li><b>01/25/22.</b> Released v0.0.1. Launch DM Land landing page for quick access to various tools.</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel hide checkerTabContent glass">
+            <h5>Checker <i class="fa-solid fa-square-plus"></i></h5>
+            <ul>
+              <li><b>02/28/22.</b> Released v0.1.1. Added parts indicator in the cards. </li>
+              <li><b>02/23/22.</b> Released v0.1.0. Introduced simple mode which hides some dragon and skill information. </li>
+              <li><b>02/22/22.</b> Released v0.0.9. Added Skill images. </li>
+              <li><b>02/15/22.</b> Released v0.0.8. Added Bloodline (Parents) and Upgrade Details. </li>
+              <li><b>02/14/22.</b> Released v0.0.7. Updated Parts and Skill upgrades UI. </li>
+              <li><b>02/12/22.</b> Released v0.0.6. Code refactor + Updated Header UI</li>
+              <li><b>02/06/22.</b> Released v0.0.5. Updated parts to display mutation tags.</li>
+              <li><b>02/04/22.</b> Released v0.0.4. Optimize code to display Dragon No. in URL.</li>
+              <li><b>02/03/22.</b> Released v0.0.3. Updated some UI components.</li>
+              <li><b>01/23/22.</b> Released v0.0.2. This includes fixes on missing dragon parts. </li>
+              <li><b>01/20/22.</b> Released v0.0.1. This includes searching dragons, completed with all dragon parts.</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel hide marketTabContent glass">
+            <h5>Market <i class="fa-solid fa-square-plus"></i></h5>
+            <ul>
+              <li><b>03/01/22.</b> Released v0.0.7. Support for multiple page displays. <br /></li>
+              <li><b>02/14/22.</b> Released v0.0.6. Added Parts search (highly experimental) <br /></li>
+              <li><b>02/12/22.</b> Released v0.0.5. Updated Header UI + Sidebar checkBoxes and added Dark Mode.</li>
+              <li><b>02/06/22.</b> Released v0.0.4. Updated some UI components + fixed slider bug on page load.</li>
+              <li><b>02/05/22.</b> Released v0.0.3. Added Stat, Max Display filters and reworked Sort.</li>
+              <li><b>02/04/22.</b> Released v0.0.2. Fixed various bugs and integrated to Checker +.</li>
+              <li><b>02/03/22.</b> Released v0.0.1. Release first initial version of Market +.</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel hide breedingTabContent glass">
+            <h5>Breeding <i class="fa-solid fa-square-plus"></i></h5>
+            <ul>
+              <li><b>02/21/22.</b> Released v0.0.1. Released with basic breeding information.</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel hide explorerTabContent glass">
+            <h5>Explorer <i class="fa-solid fa-square-plus"></i></h5>
+            <ul>
+              <li><b>02/22/22.</b> Released v0.0.1. Released with basic cards information.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="goToTop" class="glass" title=""><i class="fa-duotone fa-chevrons-up"></i></button>
+
+    <footer class="page-footer grey darken-4">
       <div class="container">
-        © <span class="currentYear"></span> GibiDroidz
-        <a class="grey-text text-lighten-4 right" href="https://dragonmainland.io" target="_blank">Dragon Mainland</a>
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Made for Mainlanders,<br />With love ❤️</h5>
+
+            <div class="creator">
+              <a class="btn-floating pulse white"><img class="" src="https://cdn.discordapp.com/avatars/366452806246465537/465a93828fe0c618317c03bbe774512f.webp?size=100" alt=""></a>
+              <div>GibiDroidZ#3281</div>
+            </div>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Tools</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="./CheckerPlus/index.html">Checker <i class="fa-solid fa-square-plus"></i></a></li>
+              <li><a class="grey-text text-lighten-3" href="./MarketPlus/index.html">Market <i class="fa-solid fa-square-plus"></i></a></li>
+              <li><a class="grey-text text-lighten-3" href="./BreedingPlus/index.html">Breeding <i class="fa-solid fa-square-plus"></i></a></li>
+              <li><a class="grey-text text-lighten-3" href="./ExplorerPlus/index.html">Explorer <i class="fa-solid fa-square-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+      <div class="footer-copyright black">
+        <div class="container">
+          © <span class="currentYear"></span> GibiDroidz
+          <a class="grey-text text-lighten-4 right" href="https://dragonmainland.io" target="_blank">Dragon Mainland</a>
+        </div>
+      </div>
+    </footer>
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
 
-  <script src="scripts.js"></script>
-</body>
+    <script src="scripts.js"></script>
+  </body>
 
-</html>
+  </html>

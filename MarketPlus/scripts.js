@@ -4,6 +4,16 @@
     $(this).toggleClass('active');
   });
 
+  $('.closeFilter').click(function() {
+    $('.mobileNav').addClass('hide');
+  });
+
+  $('.showFilter').click(function() {
+    $('.mobileNav').removeClass('hide');
+  });
+
+
+
   // Fix Slider Issue
   $(function() {
     $("#filter_CE").slider({
@@ -203,15 +213,6 @@
   }
 
   function setPage(page) {
-
-    //alert(currentPage);
-
-    //currentPage.searchParams.append('x', 42);
-
-// If your expected result is "http://foo.bar/?x=42&y=2"
-//const queryString = window.location.search;
-//const urlParams = new URLSearchParams(queryString);
-
     urlParams.set('page', page);
     location.href = 'index.html?' + urlParams;
   }

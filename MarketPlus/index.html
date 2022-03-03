@@ -4,21 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop your dragons easier with a better Marketplace!">
+  <meta name="keywords"
+    content="dragon mainland, dragon, dragons, storm, fire, water, thunder, rock, upgrade, skull upgrade, skull synthesis, dragon devour, devour, dmland, nft, gibidroidz, p2e, play2earn, mainland, dragon mainland shards, dms, dragon mainland potion, dms, DAO, play to earn, dragonmainland, axie, axie infinity, next axie infinity, axie infinity killer, crypto, dm land">
 
   <title>Market +</title>
-  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
 
-  <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous"
     referrerpolicy="no-referrer" />
-
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="icon" href="../assets/DM-logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"><!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYG7YL1E4Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-XYG7YL1E4Z');
+  </script>
+
+  <link rel="icon" href="../assets/DM-logo.png">
   <link href="../general.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="../parts.css" rel="stylesheet">
@@ -240,9 +250,153 @@
         </div>
       </div>
     </div>
+    <!--div class="mobileNav glass hide">
+      <div class="filters">
+        <div class="filterButtons">
+
+          <a class="waves-effect waves-light btn apply_Filter brown">APPLY FILTER</a>
+          <a class="waves-effect waves-light btn reset_Filter red"> <i class="fa fa-arrows-rotate"></i></a>
+          <a class="waves-effect waves-light btn closeFilter grey darken-4"> <i class="fa fa-remove"></i></a>
+        </div>
+
+        <div class="filterCategories">
+          <ul class="filter_tabs">
+            <li class="filter_tabs-general selected"><i class="fa-solid fa-feather-pointed"></i><br />General</li>
+            <li class="filter_tabs-part"><i class="fa-solid fa-dragon"></i></i><br />Parts</li>
+            <li class="filter_tabs-stat"><i class="fa-solid fa-ballot-check"></i><br />Stats</li>
+          </ul>
+
+          <div class="categ_general filterCategContainer">
+            <div class="categ_race">
+              <p class="categ_label">Race</p>
+              <label>
+                <input type="checkbox" class="reset-checkbox" id="filter_fire" />
+                <span>Fire</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="reset-checkbox" id="filter_water" />
+                <span>Water</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="reset-checkbox" id="filter_storm" />
+                <span>Storm</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="reset-checkbox" id="filter_rock" />
+                <span>Rock</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="reset-checkbox" id="filter_thunder" />
+                <span>Thunder</span>
+              </label>
+            </div>
+
+
+            <div class="categ_stage">
+              <p class="categ_label">Form</p>
+              <label>
+                <input type="checkbox" class="reset-checkbox" id="filter_egg" />
+                <span>Egg</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="reset-checkbox" id="filter_adult" />
+                <span>Adult</span>
+              </label>
+            </div>
+
+            <div class="categ_breedCount">
+              <p class="categ_label">Breed Count</p>
+
+              <input type="text" id="slider_bc-min" class="browser-default left" />
+              <input type="text" id="slider_bc-max" class="browser-default right" />
+              <div class="categ_bc-container">
+                <div id="filter_breedCount"></div>
+              </div>
+            </div>
+
+            <div class="categ_CE">
+              <p class="categ_label">CE</p>
+
+              <input type="text" id="slider_CE-min" class="browser-default left" />
+              <input type="text" id="slider_CE-max" class="browser-default right" />
+              <div class="categ_CE-container">
+                <div id="filter_CE"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="categ_parts hide filterCategContainer">
+            <p>This feature is highly experimental.</p>
+
+            <input type="text" name="search" class="browser-default textField">
+            <div id="selectedPartsList"></div>
+          </div>
+
+          <div class="categ_stat hide filterCategContainer">
+            <div class="statCateg_attack">
+              <p class="categ_label">Attack</p>
+
+              <input type="text" id="slider_attack-min" class="browser-default left" />
+              <input type="text" id="slider_attack-max" class="browser-default right" />
+              <div class="categ_attack-container">
+                <div id="filter_attack"></div>
+              </div>
+            </div>
+
+            <div class="statCateg_defense">
+              <p class="categ_label">Defense</p>
+
+              <input type="text" id="slider_defense-min" class="browser-default left" />
+              <input type="text" id="slider_defense-max" class="browser-default right" />
+              <div class="categ_defense-container">
+                <div id="filter_defense"></div>
+              </div>
+            </div>
+            <div class="statCateg_health">
+              <p class="categ_label">Health</p>
+
+              <input type="text" id="slider_health-min" class="browser-default left" />
+              <input type="text" id="slider_health-max" class="browser-default right" />
+              <div class="categ_health-container">
+                <div id="filter_health"></div>
+              </div>
+            </div>
+
+            <div class="statCateg_speed">
+              <p class="categ_label">Speed</p>
+
+              <input type="text" id="slider_speed-min" class="browser-default left" />
+              <input type="text" id="slider_speed-max" class="browser-default right" />
+              <div class="categ_speed-container">
+                <div id="filter_speed"></div>
+              </div>
+            </div>
+
+            <div class="statCateg_lifeForce">
+              <p class="categ_label">Life Force</p>
+
+              <input type="text" id="slider_intellect-min" class="browser-default left" />
+              <input type="text" id="slider_intellect-max" class="browser-default right" />
+              <div class="categ_intellect-container">
+                <div id="filter_intellect"></div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div-->
 
     <div class="main_content">
       <div class="filter_sort">
+
+        <a class="waves-effect waves-light btn showFilter grey darken-4"> <i class="fa-solid fa-ballot"></i></a>
         <p class="totalDragons"></p>
 
         <div class="input-field selectSortType right">
