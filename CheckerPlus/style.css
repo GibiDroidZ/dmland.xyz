@@ -304,10 +304,6 @@ a {
   text-align: center;
 }
 
-.skill_spacer {
-  margin-top: 20px;
-}
-
 .dragon_skill-part1,
 .dragon_skill-part2,
 .dragon_skill-part3,
@@ -577,4 +573,37 @@ a {
 .card-content .dragon_skill3-description,
 .card-content .dragon_skill4-description {
   font-size: 12px;
+}
+
+.dragon_talent {
+  font-size: 16px !important;
+  position: relative;
+  color: #fff;
+  padding: 5px 30px 5px 20px;
+  border-radius: 5px 0px;
+  margin: -10px 0 10px;
+  border-bottom: 3px solid RGB(30, 30, 30);
+}
+
+.dragon_talentLevel {
+  position: absolute;
+  right: 0;
+  background-color: RGB(30, 30, 30);
+  padding: 5px;
+  top: -3px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dragon_talentLevel:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -15px;
+  border: 22px solid RGB(30, 30, 30);
+  right: 0px;
+  z-index: 2;
+  border-bottom-color: transparent;
+  border-top-width: 0;
+  border-bottom-width: 15px;
 }

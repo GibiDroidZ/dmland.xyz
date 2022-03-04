@@ -91,6 +91,7 @@
 
   <div class="changeLogsContent dropdown_Picker hide">
     <p class="small-text">
+      <b>03/05/22.</b> Released v0.1.2. Added talent details. <br />
       <b>02/28/22.</b> Released v0.1.1. Added parts indicator in the cards. <br />
       <b>02/23/22.</b> Released v0.1.0. Introduced simple mode which hides some dragon and skill information. <br />
       <b>02/22/22.</b> Released v0.0.9. Added Skill images. <br />
@@ -168,8 +169,6 @@
               <i class="fas fa-bars right"></i>
             </div>
 
-            <p class="detail_section dragonSummarySection">Summary</p>
-            <br />
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Health"><i class="fas fa-heart"></i> <span class="dragon_health"></span></div>
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Attack"><i class="fas fa-sword"></i> <span class="dragon_attack"></span></div>
             <div class="detail-icon tooltipped" data-position="top" data-tooltip="Defense"><i class="fas fa-shield"></i> <span class="dragon_defense"></span></div>
@@ -290,6 +289,13 @@
       <div class="dragon_details col l5 m6 s12 ">
         <p class="detail_section">Skills</p>
         <div class="row">
+          <div class="col l12 m12 s12">
+
+            <p class="dragon_talent">
+              <span class="dragon_talentDesc"></span>
+              <span class="dragon_talentLevel"></span>
+            </p>
+          </div>
           <div class="col l6 m6 s12">
             <div class="card dragon_card">
               <div class="card-image">
@@ -354,7 +360,7 @@
             </div>
           </div>
 
-          <div class="col l6 m6 s12 skill_spacer">
+          <div class="col l6 m6 s12">
             <div class="card dragon_card">
               <div class="card-image">
                 <img class="dragon_skill3-image" src="">
@@ -386,7 +392,7 @@
             </div>
           </div>
 
-          <div class="col l6 m6 s12 skill_spacer">
+          <div class="col l6 m6 s12">
             <div class="card dragon_card">
               <div class="card-image">
                 <img class="dragon_skill4-image" src="">

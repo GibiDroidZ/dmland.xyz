@@ -5,7 +5,6 @@ var simpleModeToggle;
 $(".simpleMode").click(function() {
   if (simpleModeToggle == undefined || simpleModeToggle == 'Off') {
     $('.dragonInfoSection').addClass('simple');
-    $('.dragonSummarySection').addClass('simple');
     $('.dragonPartSection').addClass('simple');
     $('.dragonPartExpose').addClass('simple');
     $('.card-image').addClass('simple');
@@ -15,15 +14,13 @@ $(".simpleMode").click(function() {
   }
 
   else {
+    $('.dragonInfoSection').removeClass('simple');
+    $('.dragonPartSection').removeClass('simple');
+    $('.dragonPartExpose').removeClass('simple');
+    $('.card-image').removeClass('simple');
+    $('.contentSpacer').removeClass('simple');
 
-      $('.dragonInfoSection').removeClass('simple');
-      $('.dragonSummarySection').removeClass('simple');
-      $('.dragonPartSection').removeClass('simple');
-      $('.dragonPartExpose').removeClass('simple');
-      $('.card-image').removeClass('simple');
-      $('.contentSpacer').removeClass('simple');
-
-      simpleModeToggle = 'Off';
+    simpleModeToggle = 'Off';
   }
 });
 
@@ -81,67 +78,43 @@ function retrieveDragon(dragonData) {
       var dragons = data.data;
       dragonNo = dragons.no;
       dragonId = dragons.id;
+      var dragonType;
       var marketLink = 'https://dragonmainland.io/#/myMainland/myDragonDetail/';
-
-      //var bloodlineData = '{"heroId":' + dragons.id + '}';
-      //getDragonBloodline(bloodlineData);
+      console.log(dragons);
 
       $(".dragon_number").html('#' + dragonNo);
       $(".link-out").attr('href', marketLink + dragons.id);
 
       switch (dragons.clazz) {
         case 1:
-          $(".dragon_number").removeClass().addClass('dragon_number dragon_type-water');
           $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentWater');
+          dragonType = 'water';
           break;
 
         case 2:
-          $(".dragon_number").removeClass().addClass('dragon_number dragon_type-fire');
           $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentFire');
+          dragonType = 'fire';
           break;
 
         case 3:
-          $(".dragon_number").removeClass().addClass('dragon_number dragon_type-rock');
           $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentRock');
+          dragonType = 'rock';
           break;
 
         case 4:
-          $(".dragon_number").removeClass().addClass('dragon_number dragon_type-storm');
           $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentStorm');
+          dragonType = 'storm';
           break;
 
         case 5:
-          $(".dragon_number").removeClass().addClass('dragon_number dragon_type-thunder');
           $(".dragonIndividual.dragon_body").removeClass().addClass('dragonIndividual dragon_body dragon_card-contentThunder');
+          dragonType = 'thunder';
           break;
         default:
 
       }
 
-      /*
-      switch (dragons.mutation) {
-        case 0:
-          $(".dragon_tag").removeClass().addClass('dragon_tag hide');
-          break;
-
-        case -2:
-          $(".dragon_tag").html('Negative');
-          $(".dragon_tag").removeClass().addClass('dragon_tag dragon_tab-negative');
-          break;
-
-        case 2:
-          $(".dragon_tag").html('Rare');
-          $(".dragon_tag").removeClass().addClass('dragon_tag dragon_tab-rare');
-          break;
-
-        case 4:
-          $(".dragon_tag").html('Mystic');
-          $(".dragon_tag").removeClass().addClass('dragon_tag dragon_tab-mystic');
-          break;
-        default:
-
-      }
-      */
+      $(".dragon_number").removeClass().addClass('dragon_number dragon_type-' + dragonType);
 
       switch (true) {
         case (dragons.mutation == 0):
@@ -218,128 +191,6 @@ function retrieveDragon(dragonData) {
       var part4Mutation;
       var part5Mutation;
       var part6Mutation;
-
-      /*
-      switch (dragons.parts[0].mutation) {
-        case 1:
-          part1Mutation = '(Negative)';
-          break;
-
-        case 0:
-          part1Mutation = '';
-          break;
-
-        case 1:
-          part1Mutation = '(Rare)';
-          break;
-
-        case 2:
-          part1Mutation = '(Mystic)';
-          break;
-
-        default:
-      }
-
-      switch (dragons.parts[1].mutation) {
-        case -1:
-          part2Mutation = '(Negative)';
-          break;
-
-        case 0:
-          part2Mutation = '';
-          break;
-
-        case 1:
-          part2Mutation = '(Rare)';
-          break;
-
-        case 2:
-          part2Mutation = '(Mystic)';
-          break;
-
-        default:
-      }
-
-      switch (dragons.parts[2].mutation) {
-        case -1:
-          part3Mutation = '(Negative)';
-          break;
-
-        case 0:
-          part3Mutation = '';
-          break;
-
-        case 1:
-          part3Mutation = '(Rare)';
-          break;
-
-        case 2:
-          part3Mutation = '(Mystic)';
-          break;
-
-        default:
-      }
-
-      switch (dragons.parts[3].mutation) {
-        case -1:
-          part4Mutation = '(Negative)';
-          break;
-
-        case 0:
-          part4Mutation = '';
-          break;
-
-        case 1:
-          part4Mutation = '(Rare)';
-          break;
-
-        case 2:
-          part4Mutation = '(Mystic)';
-          break;
-
-        default:
-      }
-
-      switch (dragons.parts[4].mutation) {
-        case -1:
-          part5Mutation = '(Negative)';
-          break;
-
-        case 0:
-          part5Mutation = '';
-          break;
-
-        case 1:
-          part5Mutation = '(Rare)';
-          break;
-
-        case 2:
-          part5Mutation = '(Mystic)';
-          break;
-
-        default:
-      }
-
-      switch (dragons.parts[5].mutation) {
-        case -1:
-          part6Mutation = '(Negative)';
-          break;
-
-        case 0:
-          part6Mutation = '';
-          break;
-
-        case 1:
-          part6Mutation = '(Rare)';
-          break;
-
-        case 2:
-          part6Mutation = '(Mystic)';
-          break;
-
-        default:
-      }
-      */
 
       switch (true) {
         case (dragons.parts[0].mutation < 0):
@@ -482,6 +333,10 @@ function retrieveDragon(dragonData) {
       $(".dragonIndividual .dragon_body-wing").attr("class", 'activator dragon_body-wing dragon-' + dragons.parts[4].dnaNameEn.replace(/\s/g, ''));
       $(".dragonIndividual .dragon_body-tail").attr("class", 'activator dragon_body-tail dragon-' + dragons.parts[5].dnaNameEn.replace(/\s/g, ''));
       $(".dragonIndividual .dragon_body-body").attr("class", 'activator dragon_body-body dragon-' + dragons.parts[6].dnaNameEn.replace(/\s/g, ''));
+
+      $(".dragon_talent .dragon_talentDesc").html(dragons.talent.des);
+      $(".dragon_talent .dragon_talentLevel").html('<i class="fa-solid fa-crown"></i>' + (dragons.talent.level - 1));
+      $(".dragon_talent").removeClass().addClass("ribbon dragon_talent dragon_type-" + dragonType);
 
       var star;
       $(".dragon_skill1").html(dragons.skillNo1.name);

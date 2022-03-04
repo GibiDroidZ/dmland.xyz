@@ -35,7 +35,7 @@
   position: fixed;
   background-color: white;
   border-radius: 5px;
-  z-index: 2;
+  z-index: 4;
   border-bottom: 5px solid #212121;
   top: 45px;
   box-shadow: 0 0 5px RGBA(0, 0, 0, .5);
