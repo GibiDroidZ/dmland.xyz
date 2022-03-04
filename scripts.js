@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 carouselLinks = [
   {
-    'img_url': 'https://media.discordapp.net/attachments/947897397802070098/947897865068482580/030422._Skills_Update_c.png',
-    'link': ''
+    'img_url': 'https://media.discordapp.net/attachments/933341612480823298/949401298124554290/030522._Skills_Live_c.png',
+    'link': './ExplorerPlus/index.html'
   },
   {
     'img_url': 'https://media.discordapp.net/attachments/947897397802070098/947903629732499466/022322._DMS_Consumption_c.png',
