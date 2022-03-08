@@ -83,6 +83,8 @@
 .changeLogsContent {
   right: 10px;
   padding: 0 20px;
+  height: 130px;
+  overflow: auto;
 }
 
 .changeLogsContent:before {

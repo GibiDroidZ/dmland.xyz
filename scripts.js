@@ -13,6 +13,10 @@ $('.notice').click(function() {
   $(this).toggleClass('active');
 });
 
+$('.removeAnnoucement').click(function() {
+  $('#scroll-container').addClass('hide');
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     var carousel_items = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(carousel_items, {
@@ -22,16 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 carouselLinks = [
   {
+    'img_url': 'https://media.discordapp.net/attachments/947502424959115295/950775209563131914/030822._MP_BNB.png',
+    'link': ''
+  },
+  {
     'img_url': 'https://media.discordapp.net/attachments/933341612480823298/949401298124554290/030522._Skills_Live_c.png',
     'link': './ExplorerPlus/index.html'
   },
   {
     'img_url': 'https://media.discordapp.net/attachments/947897397802070098/947903629732499466/022322._DMS_Consumption_c.png',
     'link': 'https://docs.google.com/forms/d/e/1FAIpQLSeUG2ogh6guIGG5DeP-huGqXgHJil9c2l4iNlX7RWj8X12Rng/viewform'
-  },
-  {
-    'img_url': 'https://media.discordapp.net/attachments/947897397802070098/947905137047908352/021822._DAO_Voting.png',
-    'link': ''
   }
 ];
 
