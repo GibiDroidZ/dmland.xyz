@@ -47,23 +47,23 @@ function generateDragon() {
   $(".dragon_skill2-image").attr('src', '../Skills/Skill_' + dragons.parts[3].dnaNameEn + '.png');
   addCardType(dragons.parts[3].dna, 2);
 
-  $(".dragon_skill4").html(dragons.parts[4].skillName);
-  $(".dragon_skill4-energy").html(dragons.parts[4].energy);
-  $(".dragon_skill4-description").html(dragons.parts[4].skillDesc);
-  $(".dragon_skill4-damage").html(dragons.parts[4].damage);
-  $(".dragon_skill4-shield").html(dragons.parts[4].shield);
-  $(".dragon_skill-part4").html(dragons.parts[4].dnaNameEn);
-  $(".dragon_skill4-image").attr('src', '../Skills/Skill_' + dragons.parts[4].dnaNameEn + '.png');
-  addCardType(dragons.parts[4].dna, 4);
+  $(".dragon_skill3").html(dragons.parts[4].skillName);
+  $(".dragon_skill3-energy").html(dragons.parts[4].energy);
+  $(".dragon_skill3-description").html(dragons.parts[4].skillDesc);
+  $(".dragon_skill3-damage").html(dragons.parts[4].damage);
+  $(".dragon_skill3-shield").html(dragons.parts[4].shield);
+  $(".dragon_skill-part3").html(dragons.parts[4].dnaNameEn);
+  $(".dragon_skill3-image").attr('src', '../Skills/Skill_' + dragons.parts[4].dnaNameEn + '.png');
+  addCardType(dragons.parts[4].dna, 3);
 
-  $(".dragon_skill3").html(dragons.parts[5].skillName);
-  $(".dragon_skill3-energy").html(dragons.parts[5].energy);
-  $(".dragon_skill3-description").html(dragons.parts[5].skillDesc);
-  $(".dragon_skill3-damage").html(dragons.parts[5].damage);
-  $(".dragon_skill3-shield").html(dragons.parts[5].shield);
-  $(".dragon_skill-part3").html(dragons.parts[5].dnaNameEn);
-  $(".dragon_skill3-image").attr('src', '../Skills/Skill_' + dragons.parts[5].dnaNameEn + '.png');
-  addCardType(dragons.parts[5].dna, 3);
+  $(".dragon_skill4").html(dragons.parts[5].skillName);
+  $(".dragon_skill4-energy").html(dragons.parts[5].energy);
+  $(".dragon_skill4-description").html(dragons.parts[5].skillDesc);
+  $(".dragon_skill4-damage").html(dragons.parts[5].damage);
+  $(".dragon_skill4-shield").html(dragons.parts[5].shield);
+  $(".dragon_skill-part4").html(dragons.parts[5].dnaNameEn);
+  $(".dragon_skill4-image").attr('src', '../Skills/Skill_' + dragons.parts[5].dnaNameEn + '.png');
+  addCardType(dragons.parts[5].dna, 4);
 
   buildMarketLink();
 }
