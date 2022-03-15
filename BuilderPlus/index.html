@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Check the details of your dragon, even if it's still an egg!">
+  <meta name="description" content="Build your dream dragon!">
   <meta name="keywords"
     content="dragon mainland, dragon, dragons, storm, fire, water, thunder, rock, upgrade, skull upgrade, skull synthesis, dragon devour, devour, dmland, nft, gibidroidz, p2e, play2earn, mainland, dragon mainland shards, dms, dragon mainland potion, dms, DAO, play to earn, dragonmainland, axie, axie infinity, next axie infinity, axie infinity killer, crypto, dm land">
 
-  <title>Checker +</title>
+  <title>Builder +</title>
 
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -61,7 +61,7 @@
 
   <div class="row app_PickerContent dropdown_Picker hide">
     <div class="col l6 m6 s6">
-      <a href="#">
+      <a href="../CheckerPlus/index.html">
         <i class="fa-duotone fa-badge-check fa-2xl"></i> <br />
         Checker <i class="fa-solid fa-square-plus"></i>
       </a>
@@ -74,7 +74,7 @@
       </a>
     </div>
 
-    <div class="col l6 m6 s6 no-margin">
+    <div class="col l6 m6 s6">
       <a href="../BreedingPlus/index.html">
         <i class="fa-duotone fa-egg-fried fa-2xl"></i><br />
         Breeding <i class="fa-solid fa-square-plus"></i>
@@ -88,8 +88,8 @@
       </a>
     </div>
 
-    <div class="col l6 m6 s6">
-      <a href="../BuilderPlus/index.html">
+    <div class="col l6 m6 s6 no-margin">
+      <a href="#">
         <i class="fa-duotone fa-puzzle fa-2xl"></i><br />
         Builder <i class="fa-solid fa-square-plus"></i>
       </a>
@@ -98,18 +98,7 @@
 
   <div class="changeLogsContent dropdown_Picker hide">
     <p class="small-text">
-      <b>03/05/22.</b> Released v0.1.2. Added talent details. <br />
-      <b>02/28/22.</b> Released v0.1.1. Added parts indicator in the cards. <br />
-      <b>02/23/22.</b> Released v0.1.0. Introduced simple mode which hides some dragon and skill information. <br />
-      <b>02/22/22.</b> Released v0.0.9. Added Skill images. <br />
-      <b>02/15/22.</b> Released v0.0.8. Added Bloodline (Parents) and Upgrade Details. <br />
-      <b>02/14/22.</b> Released v0.0.7. Updated Parts and Skill upgrades UI. <br />
-      <b>02/12/22.</b> Released v0.0.6. Code refactor + Updated Header UI. <br />
-      <b>02/06/22.</b> Released v0.0.5. Updated parts to display mutation tags. <br />
-      <b>02/04/22.</b> Released v0.0.4. Optimize code to display Dragon No. in URL. <br />
-      <b>02/03/22.</b> Released v0.0.3. Updated some UI components. <br />
-      <b>01/23/22.</b> Released v0.0.2. This includes fixes on missing dragon parts. <br />
-      <b>01/20/22.</b> Released v0.0.1. This includes searching dragons, completed with all dragon parts.
+      <b>03/15/22.</b> Released v0.0.1. Dragon builder, complete with integration to Market +.
     </p>
   </div>
 
@@ -118,7 +107,6 @@
     <p class="small-text">
       TO DO: <br>
       1. Responsiveness issue. <br />
-      2. Maybe update the parts indicator icon LMAO <br />
     </p>
     <p class="small-text">Want to help the project? Join my discord <b><i><a href="https://discord.gg/MkKbAYFg9F">here</a></i></b></p>
 
@@ -136,173 +124,92 @@
 
   <main>
     <div class="main_content row">
-      <h1>Checker <i class="fa-solid fa-square-plus"></i></h1>
+      <h1>Builder <i class="fa-solid fa-square-plus"></i></h1>
 
-      <div class="col l12 m12 s12 row valign-wrapper">
-        <div class="input-field col l10 m10 s12">
-          <input placeholder="What's your dragon number?" id="first_name" type="text" class="validate dragonNo">
-          <label for="first_name">Dragon Number</label>
-        </div>
+      <div class="col l7 m8 s12 row">
 
-        <div class="col l2 m2 s12">
-          <button class="btn waves-effect waves-light getInput brown">Search
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="dragon_showCase col l7 m6 s12">
-
-        <p class="detail_section dragonInfoSection">Dragon Information</p>
-        <div class="card">
+        <p class="detail_section">Dragon Parts</p>
+        <div class="buildArea card glass">
           <div class="card-image waves-effect waves-block waves-light">
-            <div class="dragon_body dragonIndividual">
-              <div class="dragon_body-tail"></div>
-              <div class="dragon_body-horn"></div>
-              <div class="dragon_body-ear"></div>
-              <div class="dragon_body-body"></div>
-              <div class="dragon_body-wing"></div>
-              <div class="dragon_body-totem"></div>
-              <div class="dragon_body-eyes"></div>
-              <div class="dragon_body-egg"></div>
-            </div>
-          </div>
 
-          <div class="card-content">
-            <div class="card-title activator grey-text text-darken-4">
-              <span class="dragon_number"></span>
-              <span class="dragon_tag hide"></span>
-              <a href="#" target="_blank" class="link-out"><i class="fas fa-external-link-alt"></i></a>
-              <i class="fas fa-bars right"></i>
-            </div>
-
-            <div class="detail-icon tooltipped" data-position="top" data-tooltip="Health"><i class="fas fa-heart"></i> <span class="dragon_health"></span></div>
-            <div class="detail-icon tooltipped" data-position="top" data-tooltip="Attack"><i class="fas fa-sword"></i> <span class="dragon_attack"></span></div>
-            <div class="detail-icon tooltipped" data-position="top" data-tooltip="Defense"><i class="fas fa-shield"></i> <span class="dragon_defense"></span></div>
-            <div class="detail-icon tooltipped" data-position="top" data-tooltip="Speed"><i class="fas fa-boot"></i> <span class="dragon_speed"></span></div>
-            <div class="detail-icon tooltipped" data-position="top" data-tooltip="Life Force"><i class="fas fa-fire"></i> <span class="dragon_lifeForce"></span></div>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="CE"><i class="fas fa-dumbbell"></i> <span class="dragon_ce"></span></div>
-
-            <p class="contentSpacer"></p>
-            <p class="detail_section dragonPartSection">Parts</p>
-            <br />
-            <div class="row dragonPartExpose">
-              <div class="col l6 valign-wrapper"><span class="parts-eye"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Eye">Eye</i> <span class="dragon_parts-eye"></span></div>
-              <div class="col l6 valign-wrapper"><span class="parts-totem"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Totem">Totem</i> <span class="dragon_parts-totem"></span></div>
-              <div class="col l6 valign-wrapper"><span class="parts-horn"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Horn">Horn</i> <span class="dragon_parts-horn"></span></div>
-              <div class="col l6 valign-wrapper"><span class="parts-ear"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Ear">Ear</i> <span class="dragon_parts-ear"></span></div>
-              <div class="col l6 valign-wrapper"><span class="parts-wing"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Wing">Wings</i> <span class="dragon_parts-wing"></span></div>
-              <div class="col l6 valign-wrapper"><span class="parts-tail"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Tail">Tail</i> <span class="dragon_parts-tail"></span></div>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">
-              <span class="dragon_number"></span>
-              <span class="dragon_tag"></span>
-              <i class="fas fa-close right"></i>
-            </span>
-            <p class="detail_section">Details</p>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="Breed Count"><i class="fas fa-egg"></i> <span class="dragon_breedCount"></span></div>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="Skull Upgrades"><i class="fas fa-utensils"></i> <span class="dragon_boneCount"></span></div>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="Level"><i class="fas fa-level-up-alt"></i> <span class="dragon_level"></span></div>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="CE"><i class="fas fa-dumbbell"></i> <span class="dragon_ce"></span></div>
-
-            <p class="detail_section detail_section-inline">Stats</p>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="Health"><i class="fas fa-heart"></i> <span class="dragon_health"></span></div>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="Attack"><i class="fas fa-sword"></i> <span class="dragon_attack"></span></div>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="Defense"><i class="fas fa-shield"></i> <span class="dragon_defense"></span></div>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="Speed"><i class="fas fa-boot"></i> <span class="dragon_speed"></span></div>
-            <div class="detail_icon-inline detail-icon tooltipped" data-position="top" data-tooltip="Life Force"><i class="fas fa-fire"></i> <span class="dragon_lifeForce"></span></div>
-
-            <p class="detail_section">Parts</p>
-            <div class="row">
-              <div class="col l6 detail-icon valign-wrapper"><span class="parts-eye"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Eye">Eye</i> <span class="dragon_parts-eye"></span></div>
-              <div class="col l6 detail-icon valign-wrapper"><span class="parts-totem"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Totem">Totem</i> <span class="dragon_parts-totem"></span></div>
-              <div class="col l6 detail-icon valign-wrapper"><span class="parts-horn"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Horn">Horn</i> <span class="dragon_parts-horn"></span></div>
-              <div class="col l6 detail-icon valign-wrapper"><span class="parts-ear"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Ear">Ear</i> <span class="dragon_parts-ear"></span></div>
-              <div class="col l6 detail-icon valign-wrapper"><span class="parts-wing"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Wing">Wings</i> <span class="dragon_parts-wing"></span></div>
-              <div class="col l6 detail-icon valign-wrapper"><span class="parts-tail"></span><i class="dragon_part-pill tooltipped" data-position="top" data-tooltip="Tail">Tail</i> <span class="dragon_parts-tail"></span></div>
-            </div>
-
-            <p class="detail_section noBottomMargin">Bloodline</p>
-            <div class="dragon_hiddenSection dragon_bloodLineToggle">
-              Click to show <i class="fa-duotone fa-eye"></i> <br />
-            </div>
-
-            <div class="dragon_hiddenSection dragon_bloodLineToggle noData hide">
-              No data <i class="fa-duotone fa-binary-slash"></i> <br />
-            </div>
-
-            <div class="dragon_bloodLine">
-              <div class="dragon_parent hide">
-                <p class="detail_section">Parents</p>
-                <div class="dragon_body dragon_Father">
-                  <p class="dragonNo"></p>
-                  <a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a>
-                  <div class="">
-                    <div class="dragon_body-tail"></div>
-                    <div class="dragon_body-horn"></div>
-                    <div class="dragon_body-ear"></div>
-                    <div class="dragon_body-body"></div>
-                    <div class="dragon_body-wing"></div>
-                    <div class="dragon_body-totem"></div>
-                    <div class="dragon_body-eyes"></div>
-                  </div>
-                </div>
-
-                <div class="dragon_body dragon_Mother">
-                  <p class="dragonNo"></p>
-                  <a href="#" target="_blank" class="link-out right"><i class="fas fa-external-link-alt"></i></a>
-                  <div class="">
-                    <div class="dragon_body-tail"></div>
-                    <div class="dragon_body-horn"></div>
-                    <div class="dragon_body-ear"></div>
-                    <div class="dragon_body-body"></div>
-                    <div class="dragon_body-wing"></div>
-                    <div class="dragon_body-totem"></div>
-                    <div class="dragon_body-eyes"></div>
-                  </div>
-                </div>
+            <div class="dragonParts col l4 m4 s12">
+              <div class="individualPartSection">
+                <span>Eye</span>
+                <input type="text" name="search" class="browser-default textField dragonSearch_eye">
+                <div id="selectedPartsList_eye"></div>
               </div>
 
-              <div class="dragon_children">
+              <div class="individualPartSection">
+                <span>Totem</span>
+                <input type="text" name="search" class="browser-default textField dragonSearch_totem">
+                <div id="selectedPartsList_totem"></div>
               </div>
+
+              <div class="individualPartSection">
+                <span>Horn</span>
+                <input type="text" name="search" class="browser-default textField dragonSearch_horn">
+                <div id="selectedPartsList_horn"></div>
+              </div>
+
+              <div class="individualPartSection">
+                <span>Ear</span>
+                <input type="text" name="search" class="browser-default textField dragonSearch_ear">
+                <div id="selectedPartsList_ear"></div>
+              </div>
+
+              <div class="individualPartSection">
+                <span>Wings</span>
+                <input type="text" name="search" class="browser-default textField dragonSearch_wing">
+                <div id="selectedPartsList_wing"></div>
+              </div>
+
+              <div class="individualPartSection">
+                <span>Tail</span>
+                <input type="text" name="search" class="browser-default textField dragonSearch_tail">
+                <div id="selectedPartsList_tail"></div>
+              </div>
+
+              <div class="individualPartSection">
+                <span>Race</span>
+                <input type="text" name="search" class="browser-default textField dragonSearch_body">
+                <div id="selectedPartsList_body"></div>
+              </div>
+
+              <button type="button" class="waves-effect waves-light btn brown randomizer" name="button" onclick="generateDragon();">RANDOM <i class="fa-solid fa-shuffle"></i></button>
             </div>
 
-            <p class="detail_section">Upgrade History</p>
-            <div class="dragon_hiddenSection dragon_upgradeToggle">
-              Click to show <i class="fa-duotone fa-eye"></i> <br />
+            <div class="dragonBuild col l8 m8 s12">
+              <div class="dragon_body">
+                <div class="dragon_body-tail"></div>
+                <div class="dragon_body-horn"></div>
+                <div class="dragon_body-ear"></div>
+                <div class="dragon_body-body"></div>
+                <div class="dragon_body-wing"></div>
+                <div class="dragon_body-totem"></div>
+                <div class="dragon_body-eyes"></div>
+                <div class="dragon_body-egg"></div>
+              </div>
+
+              <a href="#" class="black-text searchMarket similarDragons right-align" target="_blank"><i class="fa-solid fa-magnifying-glass"></i></i> Dragon with same parts <i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="black-text searchMarket similarSkills right-align" target="_blank"><i class="fa-solid fa-magnifying-glass"></i></i> Dragon with same abilities <i class="fas fa-external-link-alt"></i></a>
             </div>
-
-            <div class="dragon_hiddenSection dragon_upgradeToggle noData hide">
-              No data <i class="fa-duotone fa-binary-slash"></i> <br />
-            </div>
-
-            <table class="dragon_updateTable hide">
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Upgrade</th>
-                </tr>
-              </thead>
-
-              <tbody>
-              </tbody>
-            </table>
           </div>
+        </div>
+
+        <p class="detail_section">Meta Builds</p>
+        <div class="metaBuildContainer">
+          <div class="card glass metaBuilds"></div>
+          <div class="card glass metaBuilds"></div>
+          <div class="card glass metaBuilds"></div>
+          <div class="card glass metaBuilds"></div>
+          <div class="card glass metaBuilds"></div>
+          <div class="card glass metaBuilds"></div>
         </div>
       </div>
 
       <div class="dragon_details col l5 m6 s12 ">
         <p class="detail_section">Skills</p>
         <div class="row">
-          <div class="col l12 m12 s12">
-
-            <p class="dragon_talent">
-              <span class="dragon_talentDesc"></span>
-              <span class="dragon_talentLevel"></span>
-            </p>
-          </div>
           <div class="col l6 m6 s12">
             <div class="card dragon_card">
               <div class="card-image">
@@ -431,19 +338,20 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
   </main>
 
-
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
 
   <script src="../general.js"></script>
+  <script src="../parts.js"></script>
   <script src="scripts.js"></script>
 </body>
 
