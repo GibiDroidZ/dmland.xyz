@@ -378,8 +378,9 @@ a {
 }
 
 .ui-autocomplete {
+  height: 210px;
   width: 210px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .ui-helper-hidden-accessible {
