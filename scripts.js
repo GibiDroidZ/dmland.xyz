@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 carouselLinks = [
   {
+    'img_url': 'https://media.discordapp.net/attachments/947897397802070098/978964444237418496/052522._DMLand_Support_v2.png',
+    'link': ''
+  },
+  {
     'img_url': 'https://media.discordapp.net/attachments/947502424959115295/950775209563131914/030822._MP_BNB.png',
     'link': ''
   },

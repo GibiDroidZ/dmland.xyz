@@ -251,24 +251,6 @@
   var dna = urlParams.get('dna') || '';
   var searchPartString = dna || '';
 
-  /*var price_BNB;
-  function getBNBPrice() {
-    $.ajax({
-      type: "GET",
-      url: 'https://deep-index.moralis.io/api/v2/erc20/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c/price?chain=bsc',
-      dataType: "json",
-      data: {},
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      headers: {"X-API-Key": "26AT5nyIs5DElZC5K96liLa40jsdK2df4PnfPPL9dFbgtu9sCPReEogEW13cZOQs"},
-      success: function(data) {
-        price_BNB = data.usdPrice;
-      }
-    });
-  }
-  //  <span class="BNBtoUSD"><i>' + price_BNB + '</i></span>
-  getBNBPrice();*/
-
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems, {});
